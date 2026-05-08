@@ -1,5 +1,9 @@
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
+    if (link.classList.contains("inquiry-trigger")) {
+      return;
+    }
+
     const targetId = link.getAttribute("href");
 
     if (!targetId || targetId === "#") {
@@ -108,4 +112,117 @@ if (testimonialCard) {
 
   renderTestimonial();
   restartTestimonials();
+}
+
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const mobileMenuCloseItems = document.querySelectorAll("[data-menu-close], .mobile-sidebar a");
+const mobileSubmenuToggles = document.querySelectorAll(".mobile-submenu-toggle");
+
+if (mobileMenuToggle) {
+  const closeMobileMenu = () => {
+    document.body.classList.remove("mobile-menu-open");
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+  };
+
+  mobileMenuToggle.addEventListener("click", () => {
+    const isOpen = document.body.classList.toggle("mobile-menu-open");
+    mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  mobileMenuCloseItems.forEach((item) => {
+    item.addEventListener("click", closeMobileMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
+  });
+}
+
+mobileSubmenuToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const submenu = toggle.nextElementSibling;
+    const isOpen = toggle.classList.toggle("is-open");
+
+    toggle.setAttribute("aria-expanded", String(isOpen));
+
+    if (submenu && submenu.classList.contains("mobile-submenu")) {
+      submenu.classList.toggle("is-open", isOpen);
+    }
+  });
+});
+
+const productGallery = document.querySelector(".product-gallery");
+
+if (productGallery) {
+  const mainImage = productGallery.querySelector(".product-main-image img");
+  const thumbnails = Array.from(productGallery.querySelectorAll(".product-thumbs img"));
+  const prevButton = productGallery.querySelector(".product-thumbs button:first-child");
+  const nextButton = productGallery.querySelector(".product-thumbs button:last-child");
+  let activeImageIndex = Math.max(0, thumbnails.findIndex((thumb) => thumb.classList.contains("active")));
+
+  const showProductImage = (index) => {
+    if (!mainImage || thumbnails.length === 0) return;
+
+    activeImageIndex = (index + thumbnails.length) % thumbnails.length;
+    const activeThumb = thumbnails[activeImageIndex];
+
+    mainImage.src = activeThumb.src;
+    mainImage.alt = activeThumb.alt || "PTFE / PFA / FEP lined pipes";
+
+    thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+    activeThumb.classList.add("active");
+  };
+
+  thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => showProductImage(index));
+  });
+
+  if (prevButton) {
+    prevButton.addEventListener("click", () => showProductImage(activeImageIndex - 1));
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => showProductImage(activeImageIndex + 1));
+  }
+}
+
+const inquiryModal = document.querySelector(".inquiry-modal");
+const inquiryTriggers = document.querySelectorAll(".inquiry-trigger");
+const inquiryCloseItems = document.querySelectorAll("[data-inquiry-close]");
+
+if (inquiryModal) {
+  const openInquiryModal = () => {
+    inquiryModal.hidden = false;
+    document.body.classList.add("inquiry-open");
+  };
+
+  const closeInquiryModal = () => {
+    inquiryModal.hidden = true;
+    document.body.classList.remove("inquiry-open");
+  };
+
+  inquiryTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.classList.remove("mobile-menu-open");
+      openInquiryModal();
+    });
+  });
+
+  inquiryCloseItems.forEach((item) => {
+    item.addEventListener("click", closeInquiryModal);
+  });
+
+  inquiryModal.querySelector(".inquiry-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    closeInquiryModal();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !inquiryModal.hidden) {
+      closeInquiryModal();
+    }
+  });
 }
