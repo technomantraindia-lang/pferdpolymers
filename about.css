@@ -229,11 +229,35 @@
   font-size: clamp(28px, 2.4vw, 42px);
   line-height: 1.08;
   font-weight: 900;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .about-copy h2 span,
 .about-heading h2 span {
+  color: var(--about-red);
+}
+
+.about-copy h2 .about-title-line {
+  display: block;
+}
+
+.about-copy h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 760px;
+  margin-inline: auto;
+  text-transform: uppercase;
+  letter-spacing: -0.8px;
+  line-height: 0.92;
+}
+
+.about-copy h2 .about-title-line:first-child {
+  color: var(--about-blue);
+}
+
+.about-copy h2 .about-title-line:last-child {
   color: var(--about-red);
 }
 
@@ -363,9 +387,10 @@
 }
 
 .about-heading {
-  max-width: 880px;
+  max-width: 760px;
   margin: 0 auto 44px;
   text-align: center;
+  padding-inline: 24px;
 }
 
 .about-heading .about-section-kicker {
