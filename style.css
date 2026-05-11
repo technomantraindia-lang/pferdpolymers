@@ -9861,3 +9861,60 @@ body.inquiry-open {
 .footer-cta p {
   font-weight: 400 !important;
 }
+
+/* Real logo assets */
+.brand {
+  min-width: clamp(210px, 22vw, 300px) !important;
+  min-height: 64px !important;
+}
+
+.brand .brand-mark,
+.brand .brand-copy {
+  display: none !important;
+}
+
+.brand::before {
+  content: "" !important;
+  display: block !important;
+  width: clamp(210px, 22vw, 285px) !important;
+  aspect-ratio: 379 / 85 !important;
+  background: url("header-logo.png") left center / contain no-repeat !important;
+}
+
+.site-footer .footer-logo {
+  min-width: 180px !important;
+  min-height: 92px !important;
+}
+
+.site-footer .footer-logo-mark,
+.site-footer .footer-logo-copy {
+  display: none !important;
+}
+
+.site-footer .footer-logo::before {
+  content: "" !important;
+  display: block !important;
+  width: 180px !important;
+  aspect-ratio: 336 / 170 !important;
+  background: url("footer-logo.png") left center / contain no-repeat !important;
+}
+
+@media (max-width: 760px) {
+  .brand {
+    min-width: clamp(170px, 58vw, 220px) !important;
+    min-height: 50px !important;
+  }
+
+  .brand::before {
+    width: clamp(170px, 58vw, 220px) !important;
+  }
+
+  .site-footer .footer-logo {
+    min-width: 150px !important;
+    min-height: 76px !important;
+  }
+
+  .site-footer .footer-logo::before {
+    width: 150px !important;
+  }
+}
