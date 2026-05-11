@@ -153,6 +153,51 @@ mobileSubmenuToggles.forEach((toggle) => {
   });
 });
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!prefersReducedMotion) {
+  const animateTargets = Array.from(
+    document.querySelectorAll(
+      [
+        ".feature",
+        ".product-card",
+        ".industry-card",
+        ".why-hex",
+        ".why-stat",
+        ".client-stat-icon",
+        ".testimonial-card",
+        ".about-feature",
+        ".cert-grid article",
+        ".testing-steps article",
+        ".standard-list article",
+        ".process-list article",
+        ".support-box",
+        ".quality-strip article",
+      ].join(",")
+    )
+  );
+
+  animateTargets.forEach((el) => el.classList.add("reveal-on-scroll"));
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16, rootMargin: "0px 0px -12% 0px" }
+    );
+
+    animateTargets.forEach((el) => io.observe(el));
+  } else {
+    animateTargets.forEach((el) => el.classList.add("is-revealed"));
+  }
+}
+
 const productGallery = document.querySelector(".product-gallery");
 
 if (productGallery) {
