@@ -544,6 +544,7 @@ h2 {
   align-items: flex-start;
   justify-content: center;
   margin-top: -150px;
+  overflow: visible;
 }
 
 .hero-image {
@@ -551,6 +552,7 @@ h2 {
   height: 100%;
   object-fit: contain;
   display: block;
+  transform-origin: center;
 }
 
 .blue-bg {
@@ -4705,9 +4707,13 @@ h2 {
 
 /* Laptop hero visual: make image larger */
 @media (min-width: 981px) and (max-width: 1320px) {
-  .visual {
-    transform: translateX(24px) scale(0.92);
-  }
+  .visual { transform: translateX(24px) scale(0.82); }
+  .hero-image { transform: translate(34px, -28px) scale(1.26); }
+}
+
+/* Desktop/PC hero visual: enlarge image without moving layout */
+@media (min-width: 1321px) {
+  .hero-image { transform: translate(44px, -34px) scale(1.32); }
 }
 
 @media (max-width: 980px) {
