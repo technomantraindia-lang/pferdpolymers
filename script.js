@@ -226,3 +226,65 @@ if (inquiryModal) {
     }
   });
 }
+
+const qualityStandardsVisual = document.querySelector(".quality-page .standards-visual");
+const qualityStandardsWrap = document.querySelector(".quality-page .standards-visual-wrap");
+
+if (qualityStandardsWrap && qualityStandardsVisual) {
+  const prevBtn = qualityStandardsWrap.querySelector(".standards-visual-nav.prev");
+  const nextBtn = qualityStandardsWrap.querySelector(".standards-visual-nav.next");
+  const sliderMedia = window.matchMedia("(max-width: 980px)");
+
+  const getSlides = () => Array.from(qualityStandardsVisual.querySelectorAll("img"));
+
+  const getStep = () => {
+    const slides = getSlides();
+    const firstSlide = slides[0];
+
+    if (!firstSlide) return 320;
+
+    const styles = window.getComputedStyle(qualityStandardsVisual);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap || "0") || 0;
+    return firstSlide.getBoundingClientRect().width + gap;
+  };
+
+  const updateNavState = () => {
+    if (!prevBtn || !nextBtn) return;
+
+    const maxScrollLeft = qualityStandardsVisual.scrollWidth - qualityStandardsVisual.clientWidth;
+    const enableSlider = sliderMedia.matches && maxScrollLeft > 2;
+
+    prevBtn.style.display = enableSlider ? "grid" : "none";
+    nextBtn.style.display = enableSlider ? "grid" : "none";
+
+    if (!enableSlider) {
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
+      return;
+    }
+
+    prevBtn.disabled = qualityStandardsVisual.scrollLeft <= 2;
+    nextBtn.disabled = qualityStandardsVisual.scrollLeft >= maxScrollLeft - 2;
+  };
+
+  const scrollByStep = (direction) => {
+    const step = getStep();
+    qualityStandardsVisual.scrollBy({ left: step * direction, behavior: "smooth" });
+  };
+
+  prevBtn?.addEventListener("click", (event) => {
+    event.preventDefault();
+    scrollByStep(-1);
+  });
+  nextBtn?.addEventListener("click", (event) => {
+    event.preventDefault();
+    scrollByStep(1);
+  });
+
+  qualityStandardsVisual.addEventListener("scroll", updateNavState, { passive: true });
+  window.addEventListener("resize", updateNavState, { passive: true });
+  sliderMedia.addEventListener("change", updateNavState);
+  window.addEventListener("load", updateNavState);
+
+  updateNavState();
+}

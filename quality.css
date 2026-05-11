@@ -1435,6 +1435,17 @@
   padding: 0 !important;
 }
 
+.quality-page .standards-visual-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.quality-page .standards-visual-nav {
+  display: none;
+}
+
 .quality-page .standards-visual::before {
   content: none !important;
 }
@@ -1462,20 +1473,26 @@
   z-index: 2 !important;
   left: 14px !important;
   top: 46px !important;
-  width: 360px !important;
-  height: 310px !important;
+  width: 420px !important;
+  height: 360px !important;
   aspect-ratio: auto !important;
   object-fit: contain !important;
   background: #fff !important;
   clip-path: polygon(25% 4%, 74% 4%, 100% 50%, 74% 96%, 25% 96%, 0 50%) !important;
   border: 7px solid #ffffff !important;
-  outline: 3px solid rgba(6, 45, 103, 0.82) !important;
-  outline-offset: -6px !important;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  transform: scale(0.92) !important;
+  transform-origin: center !important;
   filter:
-    drop-shadow(3px 0 0 #062d67)
-    drop-shadow(-3px 0 0 #062d67)
-    drop-shadow(0 3px 0 #062d67)
-    drop-shadow(0 -3px 0 #062d67)
+    drop-shadow(3px 0 0 #e1111c)
+    drop-shadow(-3px 0 0 #e1111c)
+    drop-shadow(0 3px 0 #e1111c)
+    drop-shadow(0 -3px 0 #e1111c)
+    drop-shadow(2px 2px 0 #e1111c)
+    drop-shadow(-2px 2px 0 #e1111c)
+    drop-shadow(2px -2px 0 #e1111c)
+    drop-shadow(-2px -2px 0 #e1111c)
     drop-shadow(0 16px 28px rgba(8, 31, 72, 0.2)) !important;
   box-shadow: none !important;
 }
@@ -1483,13 +1500,15 @@
 .quality-page .visual-secondary {
   position: absolute !important;
   z-index: 3 !important;
-  width: 180px !important;
-  height: 158px !important;
+  width: 210px !important;
+  height: 186px !important;
   object-fit: contain !important;
   background: #fff !important;
   border: 6px solid #ffffff !important;
   outline: 2px solid rgba(225, 17, 28, 0.78) !important;
   outline-offset: -5px !important;
+  transform: scale(0.92) !important;
+  transform-origin: center !important;
   filter:
     drop-shadow(2px 0 0 #e1111c)
     drop-shadow(-2px 0 0 #e1111c)
@@ -1508,8 +1527,8 @@
 .quality-page .visual-secondary-bottom {
   left: 330px !important;
   top: 198px !important;
-  width: 180px !important;
-  height: 158px !important;
+  width: 210px !important;
+  height: 186px !important;
   clip-path: polygon(25% 4%, 74% 4%, 100% 50%, 74% 96%, 25% 96%, 0 50%) !important;
 }
 
@@ -1570,23 +1589,106 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 980px) {
+  .quality-page .quality-standards {
+    overflow: visible !important;
+  }
+
+  .quality-page .standards-visual-wrap {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .quality-page .standards-visual-nav {
+    display: grid !important;
+    place-items: center !important;
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 50 !important;
+    width: 42px !important;
+    height: 42px !important;
+    transform: translateY(-50%) !important;
+    border: 1px solid rgba(8, 47, 102, 0.18) !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(6px);
+    color: #082f66 !important;
+    font-size: 26px !important;
+    line-height: 1 !important;
+    box-shadow: 0 10px 22px rgba(8, 31, 72, 0.14) !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .quality-page .standards-visual-nav.prev { left: 6px !important; }
+  .quality-page .standards-visual-nav.next { right: 6px !important; }
+
+  /* ensure buttons stay within viewport */
+  .quality-page .standards-visual-nav.prev { right: auto !important; }
+  .quality-page .standards-visual-nav.next { left: auto !important; }
+
+  .quality-page .standards-visual-nav:active {
+    transform: translateY(-50%) scale(0.96) !important;
+  }
+
   .quality-page .standards-visual {
-    min-height: 340px !important;
-    padding: 0 !important;
+    min-height: auto !important;
+    /* don't reserve space for arrows; they overlap */
+    padding: 12px 44px 0 !important;
+    display: flex !important;
+    gap: 14px !important;
+    align-items: center !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
   }
 
-  .quality-page .standards-visual > img:first-child {
-    width: 92% !important;
-    height: 235px !important;
+  .quality-page .standards-visual::-webkit-scrollbar {
+    display: none;
   }
 
-  .quality-page .visual-secondary {
-    display: none !important;
+  .quality-page .standards-visual::after {
+    content: none !important;
+  }
+
+  .quality-page .standards-visual > img {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: clamp(340px, 88vw, 420px) !important;
+    height: clamp(295px, 76vw, 360px) !important;
+    margin: 0 !important;
+    flex: 0 0 auto !important;
+    scroll-snap-align: start !important;
+    transform: scale(0.92) !important;
+    transform-origin: center !important;
+  }
+
+  /* override the more-specific desktop absolute rules */
+  .quality-page .standards-visual > img:first-child,
+  .quality-page .visual-secondary,
+  .quality-page .visual-secondary-top,
+  .quality-page .visual-secondary-bottom {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: clamp(340px, 88vw, 420px) !important;
+    height: clamp(295px, 76vw, 360px) !important;
   }
 
   .quality-page .visual-card {
-    bottom: 0 !important;
+    display: none !important;
   }
 }
 
@@ -1648,4 +1750,93 @@
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 252, 255, 0.96)) !important;
   box-shadow: 0 22px 52px rgba(8, 31, 72, 0.08) !important;
+}
+
+/* Mobile hard-fix: prevent horizontal overflow on quality page */
+@media (max-width: 760px) {
+  .quality-page,
+  .quality-page main {
+    overflow-x: hidden !important;
+  }
+
+  .quality-page .quality-hero,
+  .quality-page .quality-standards,
+  .quality-page .quality-strip,
+  .quality-page .certifications,
+  .quality-page .testing-process,
+  .quality-page .quality-matters,
+  .quality-page .quality-documents,
+  .quality-page .quality-question {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .quality-page .standards-layout,
+  .quality-page .standard-list,
+  .quality-page .process-list,
+  .quality-page .standards-visual,
+  .quality-page .testing-steps,
+  .quality-page .quality-strip,
+  .quality-page .cert-grid,
+  .quality-page .quality-matters,
+  .quality-page .doc-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .quality-page .standard-list article,
+  .quality-page .process-list article,
+  .quality-page .quality-strip article,
+  .quality-page .cert-grid article,
+  .quality-page .testing-steps article,
+  .quality-page .support-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .quality-page .standard-list article,
+  .quality-page .process-list article {
+    grid-template-columns: 48px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    padding: 14px 12px !important;
+  }
+
+  .quality-page .standard-list h3,
+  .quality-page .process-list h3,
+  .quality-page .standard-list p,
+  .quality-page .process-list p {
+    min-width: 0 !important;
+    word-break: break-word;
+  }
+
+  /* Keep visual block inside viewport */
+  .quality-page .standards-visual {
+    display: block !important;
+    overflow: hidden !important;
+    min-height: 0 !important;
+    padding: 8px 0 0 !important;
+  }
+
+  .quality-page .standards-visual > img:first-child {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: min(100%, 320px) !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  .quality-page .visual-secondary,
+  .quality-page .visual-card,
+  .quality-page .standards-visual-nav,
+  .quality-page .standards-visual::after {
+    display: none !important;
+  }
 }
