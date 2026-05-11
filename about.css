@@ -726,3 +726,2051 @@
     width: 100%;
   }
 }
+
+/* Reference-style About page redesign */
+.about-page {
+  --about-blue: #082b61;
+  --about-navy: #001f4d;
+  --about-red: #e31b2b;
+  --about-line: #e8edf5;
+  background: #fff !important;
+}
+
+.about-page .site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  min-height: 86px !important;
+  padding: 15px 48px !important;
+  border-bottom: 1px solid #dfe6f1 !important;
+  background: #fff !important;
+  box-shadow: 0 10px 26px rgba(7, 29, 69, 0.08) !important;
+}
+
+.about-page .brand {
+  min-height: 55px !important;
+}
+
+.about-page .brand::before {
+  width: 244px !important;
+}
+
+.about-page .nav {
+  gap: 28px !important;
+}
+
+.about-page .nav a,
+.about-page .nav-dropdown-toggle {
+  min-height: 34px !important;
+  color: var(--about-blue) !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  text-transform: none !important;
+}
+
+.about-page .nav a.active {
+  color: var(--about-red) !important;
+}
+
+.about-page .quote-btn {
+  min-width: 166px !important;
+  height: 52px !important;
+  border-radius: 5px !important;
+  background: var(--about-red) !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+.about-page .quote-btn {
+  font-size: 0 !important;
+}
+
+.about-page .quote-btn::before {
+  content: "Request a Quote";
+  font-size: 12px;
+}
+
+.about-page .quote-btn span {
+  font-size: 18px !important;
+}
+
+.about-page main {
+  overflow: hidden;
+  background: #fff;
+}
+
+.about-hero {
+  min-height: 432px !important;
+  display: grid !important;
+  grid-template-columns: minmax(420px, 0.78fr) minmax(250px, 0.22fr) !important;
+  align-items: center !important;
+  column-gap: 42px !important;
+  padding: 70px max(56px, calc((100vw - 1280px) / 2)) 72px !important;
+  background:
+    linear-gradient(90deg, rgba(0, 25, 62, 0.98) 0%, rgba(0, 31, 77, 0.93) 38%, rgba(0, 31, 77, 0.56) 72%, rgba(0, 31, 77, 0.42) 100%),
+    url("Home Photos/HOME PAGE 4.jpg") center right / cover no-repeat !important;
+}
+
+.about-hero::before {
+  background:
+    linear-gradient(118deg, transparent 0 74%, rgba(227, 27, 43, 0.92) 74% 80%, transparent 80%),
+    radial-gradient(circle at 0 72%, rgba(0, 79, 145, 0.22), transparent 30%) !important;
+}
+
+.about-hero::after {
+  display: none !important;
+}
+
+.about-hero-dots {
+  left: 0 !important;
+  top: 68px !important;
+  width: 95px !important;
+  height: 165px !important;
+  opacity: 0.32 !important;
+  background-size: 16px 16px !important;
+}
+
+.about-hero-copy {
+  max-width: 600px !important;
+}
+
+.about-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--about-red) !important;
+  font-size: 13px !important;
+  letter-spacing: 0 !important;
+}
+
+.about-kicker::before {
+  width: 30px !important;
+  height: 2px !important;
+  margin: 0 !important;
+}
+
+.about-hero h1 {
+  margin: 18px 0 22px !important;
+  font-size: clamp(44px, 5vw, 66px) !important;
+  line-height: 0.98 !important;
+}
+
+.about-hero p {
+  max-width: 560px !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  font-weight: 700 !important;
+}
+
+.about-hero-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.about-hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-width: 164px;
+  min-height: 50px;
+  padding: 0 24px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.about-hero-actions a:first-child {
+  border-color: var(--about-red);
+  background: var(--about-red);
+}
+
+.about-hero-badges {
+  width: 250px !important;
+  gap: 24px !important;
+  align-self: center;
+}
+
+.about-hero-badges article {
+  grid-template-columns: 64px 1fr !important;
+  min-height: 92px !important;
+  padding: 16px 18px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 18px 34px rgba(0, 20, 50, 0.22) !important;
+}
+
+.about-hero-badges strong {
+  border: 2px solid #dbe5f2;
+  background: #fff !important;
+  color: var(--about-blue);
+  font-size: 14px !important;
+}
+
+.about-hero-badges span {
+  color: var(--about-blue);
+  font-size: 13px !important;
+}
+
+.about-hero-badges span::first-line {
+  color: var(--about-blue);
+}
+
+.about-intro,
+.about-values,
+.about-why,
+.about-process,
+.about-industries,
+.about-proof {
+  padding: 64px max(52px, calc((100vw - 1280px) / 2)) !important;
+}
+
+.about-intro {
+  grid-template-columns: 420px 1fr !important;
+  gap: 62px !important;
+  background: #fff !important;
+}
+
+.about-photo-wrap img {
+  height: 470px !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 14px 34px rgba(5, 28, 68, 0.18) !important;
+}
+
+.about-experience {
+  left: -48px !important;
+  bottom: 86px !important;
+  width: 154px !important;
+  padding: 24px 20px !important;
+  border-radius: 4px !important;
+  background: var(--about-blue) !important;
+}
+
+.about-experience::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-bottom: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 6px;
+}
+
+.about-experience strong {
+  color: var(--about-red) !important;
+  font-size: 48px !important;
+}
+
+.about-experience span {
+  color: #fff !important;
+  font-size: 13px !important;
+}
+
+.about-copy {
+  min-width: 0;
+}
+
+.about-section-kicker {
+  color: var(--about-red) !important;
+  font-size: 13px !important;
+  letter-spacing: 0 !important;
+}
+
+.about-copy > .about-section-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.about-copy > .about-section-kicker::before,
+.about-copy > .about-section-kicker::after,
+.about-heading::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--about-red);
+}
+
+.about-copy h2,
+.about-heading h2,
+.about-proof h2 {
+  color: var(--about-blue) !important;
+  font-size: clamp(30px, 3vw, 44px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+}
+
+.about-copy h2 {
+  align-items: flex-start !important;
+  max-width: none !important;
+  margin: 0 0 18px !important;
+  text-align: left !important;
+}
+
+.about-copy h2 .about-title-line {
+  text-align: left;
+}
+
+.about-copy > p {
+  max-width: 760px !important;
+  font-size: 17px !important;
+  line-height: 1.78 !important;
+}
+
+.about-feature-grid {
+  gap: 18px !important;
+  margin-top: 28px !important;
+}
+
+.about-feature-grid article,
+.about-value-card,
+.about-process-card,
+.about-industry-card,
+.about-proof-card {
+  border: 1px solid var(--about-line) !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+  box-shadow: 0 14px 34px rgba(7, 29, 69, 0.08) !important;
+}
+
+.about-feature-grid article {
+  grid-template-columns: 64px 1fr !important;
+  min-height: 128px !important;
+  padding: 24px !important;
+}
+
+.about-icon {
+  width: 62px !important;
+  height: 62px !important;
+  background: var(--about-blue) !important;
+  color: #fff !important;
+  font-size: 24px !important;
+}
+
+.about-feature-grid h3,
+.about-value-card h3,
+.about-process-card h3,
+.about-industry-card h3 {
+  color: var(--about-blue) !important;
+  font-size: 16px !important;
+}
+
+.about-feature-grid p,
+.about-value-card p,
+.about-process-card p,
+.about-proof-card p {
+  color: #33445e !important;
+  font-size: 13px !important;
+  line-height: 1.62 !important;
+}
+
+.about-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  padding: 43px max(52px, calc((100vw - 1280px) / 2)) !important;
+  background: linear-gradient(90deg, #001d49, #042e66) !important;
+}
+
+.about-stats article {
+  grid-template-columns: 64px 1fr !important;
+  padding: 0 34px !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.about-stats span {
+  border: 0 !important;
+  color: #fff !important;
+  font-size: 38px !important;
+}
+
+.about-stats strong {
+  font-size: 36px !important;
+}
+
+.about-stats p {
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+}
+
+.about-values {
+  background: #fff !important;
+}
+
+.about-values .about-heading {
+  display: none !important;
+}
+
+.about-value-grid {
+  gap: 8px !important;
+}
+
+.about-value-card {
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  align-items: start;
+  min-height: 196px !important;
+  padding: 38px 34px !important;
+}
+
+.about-value-card::before {
+  display: none !important;
+}
+
+.about-value-card .about-icon {
+  grid-row: span 2;
+  margin: 0 !important;
+  background: transparent !important;
+  color: var(--about-red) !important;
+  font-size: 42px !important;
+}
+
+.about-value-card h3 {
+  position: relative;
+  margin-bottom: 22px !important;
+}
+
+.about-value-card h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 34px;
+  height: 2px;
+  background: var(--about-red);
+}
+
+.about-why {
+  grid-template-columns: 380px 1fr !important;
+  gap: 48px !important;
+  padding-top: 40px !important;
+  background: linear-gradient(180deg, #fff, #fbfdff) !important;
+}
+
+.about-why > div:first-child {
+  display: contents;
+}
+
+.about-why > div:first-child > .about-section-kicker {
+  display: none;
+}
+
+.about-why h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 34px;
+  color: var(--about-blue);
+  font-size: 30px;
+  text-align: center;
+}
+
+.about-why h2 span {
+  color: var(--about-blue);
+}
+
+.about-why h2::after,
+.about-heading::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: var(--about-red);
+}
+
+.about-why-list {
+  grid-column: 1;
+  gap: 13px !important;
+  margin: 0 !important;
+}
+
+.about-why-visual {
+  grid-column: 2;
+}
+
+.about-why-list article {
+  grid-template-columns: 42px 1fr !important;
+  gap: 14px !important;
+}
+
+.about-why-list span {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--about-blue) !important;
+  font-size: 25px !important;
+}
+
+.about-why-list h3 {
+  font-size: 15px !important;
+  line-height: 1.2;
+}
+
+.about-why-list p {
+  font-size: 12px !important;
+}
+
+.about-why-visual {
+  margin: 0 !important;
+}
+
+.about-why-visual::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 24px;
+  width: 115px;
+  height: calc(100% - 20px);
+  border-left: 4px solid var(--about-red);
+  border-bottom: 4px solid var(--about-red);
+  border-radius: 30px 0 0 24px;
+}
+
+.about-why-visual img {
+  position: relative;
+  height: 350px !important;
+  border-radius: 10px !important;
+}
+
+.about-process {
+  background: #fff !important;
+  padding-top: 42px !important;
+}
+
+.about-heading {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto 42px !important;
+  text-align: center !important;
+}
+
+.about-process .about-heading h2 {
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+
+.about-process .about-heading,
+.about-industries .about-heading {
+  display: block !important;
+  width: min(100%, 980px) !important;
+  max-width: 980px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  text-align: center !important;
+}
+
+.about-process .about-heading h2,
+.about-industries .about-heading h2 {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.about-heading .about-section-kicker,
+.about-heading p {
+  display: none !important;
+}
+
+.about-process-grid {
+  position: relative;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+}
+
+.about-process-grid::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 39px;
+  border-top: 2px dashed #efb4bb;
+}
+
+.about-process-card {
+  position: relative !important;
+  min-height: 220px !important;
+  padding: 0 24px 26px !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-align: center !important;
+}
+
+.about-process-card::before {
+  display: none !important;
+}
+
+.about-step {
+  position: relative;
+  z-index: 2;
+  width: 34px !important;
+  height: 34px !important;
+  margin: 23px auto 26px !important;
+  outline: 18px solid #fff;
+  background: var(--about-red) !important;
+  font-size: 12px !important;
+}
+
+.about-process-card::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 32px);
+  top: 8px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(7, 29, 69, 0.1);
+}
+
+.about-process-card h3 {
+  font-size: 15px !important;
+  margin-top: 24px !important;
+}
+
+.about-industries {
+  background: #fff !important;
+  padding-top: 42px !important;
+}
+
+.about-industries-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+}
+
+.about-industry-card {
+  min-height: 162px;
+  padding: 28px 14px 22px !important;
+  border-radius: 0 !important;
+  box-shadow: 0 12px 30px rgba(7, 29, 69, 0.06) !important;
+}
+
+.about-industry-card .about-icon {
+  width: 52px !important;
+  height: 52px !important;
+  margin-bottom: 12px !important;
+  background: transparent !important;
+  color: #305b99 !important;
+  font-size: 36px !important;
+}
+
+.about-industry-card h3 {
+  position: relative;
+  font-size: 15px !important;
+  line-height: 1.24 !important;
+}
+
+.about-industry-card h3::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: var(--about-red);
+}
+
+.about-proof {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 14px !important;
+  padding-top: 28px !important;
+  background: #fff !important;
+}
+
+.about-proof-card {
+  min-height: 260px;
+  padding: 34px 36px !important;
+}
+
+.about-proof-card h2 {
+  margin-top: 0 !important;
+  font-size: 25px !important;
+  text-align: center !important;
+}
+
+.about-proof-card h2::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: var(--about-red);
+}
+
+.about-cert-row {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
+
+.about-cert-row span,
+.about-location-row span {
+  min-height: 96px !important;
+  background: transparent !important;
+  color: var(--about-blue) !important;
+  font-size: 12px !important;
+}
+
+.about-cert-row span::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  border: 4px solid var(--about-blue);
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 39%, var(--about-blue) 41% 45%, transparent 47%);
+}
+
+.about-location-row {
+  position: relative;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  max-width: 330px;
+}
+
+.about-proof-card:nth-child(2) {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-proof-card:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  width: 275px;
+  height: 130px;
+  opacity: 0.2;
+  background-image: radial-gradient(circle, var(--about-blue) 2px, transparent 3px);
+  background-size: 12px 10px;
+  clip-path: polygon(0 35%, 22% 26%, 37% 45%, 53% 24%, 72% 35%, 100% 22%, 91% 61%, 68% 55%, 54% 78%, 29% 64%, 13% 83%);
+}
+
+.about-location-row span {
+  justify-items: start !important;
+  min-height: 28px !important;
+  padding: 0 0 0 22px !important;
+  text-align: left !important;
+}
+
+.about-location-row span::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  margin-left: -20px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: var(--about-red);
+}
+
+.about-cta {
+  width: min(1280px, calc(100% - 104px)) !important;
+  margin-bottom: 42px !important;
+  grid-template-columns: 1fr 220px 240px !important;
+  min-height: 126px;
+  padding: 31px 42px !important;
+  border-radius: 8px !important;
+  background:
+    linear-gradient(90deg, rgba(0, 25, 62, 0.98), rgba(0, 31, 77, 0.91)),
+    url("Home Photos/HOME PAGE 11.jpg") center / cover no-repeat !important;
+}
+
+.about-cta h2 {
+  font-size: 27px !important;
+}
+
+.about-cta a {
+  height: 58px !important;
+  border-radius: 5px !important;
+}
+
+.about-cta a:first-of-type {
+  background: var(--about-red) !important;
+}
+
+.about-page .site-footer {
+  border-top: 0 !important;
+  background: #001f4d !important;
+}
+
+.about-page .site-footer .footer-cta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 28px !important;
+  padding: 18px 24px !important;
+}
+
+@media (max-width: 1180px) {
+  .about-page .site-header {
+    padding: 14px 22px !important;
+  }
+
+  .about-hero,
+  .about-intro,
+  .about-why,
+  .about-proof,
+  .about-cta {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-hero-badges {
+    margin-left: 0 !important;
+  }
+
+  .about-stats,
+  .about-value-grid,
+  .about-process-grid,
+  .about-industries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .about-process-grid::before {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-page .site-header {
+    min-height: 72px !important;
+    padding: 10px 16px !important;
+  }
+
+  .about-page .brand::before {
+    width: clamp(170px, 58vw, 220px) !important;
+  }
+
+  .about-hero,
+  .about-intro,
+  .about-values,
+  .about-why,
+  .about-process,
+  .about-industries,
+  .about-proof {
+    padding: 48px 18px !important;
+  }
+
+  .about-hero {
+    min-height: 560px !important;
+  }
+
+  .about-hero h1 {
+    font-size: 39px !important;
+  }
+
+  .about-copy h2,
+  .about-heading h2,
+  .about-proof h2 {
+    white-space: normal !important;
+  }
+
+  .about-process .about-heading h2 {
+    white-space: normal !important;
+  }
+
+  .about-hero p {
+    font-size: 14px !important;
+  }
+
+  .about-hero-actions a {
+    width: 100%;
+  }
+
+  .about-hero-badges {
+    width: 100% !important;
+  }
+
+  .about-photo-wrap img,
+  .about-why-visual img {
+    height: 300px !important;
+  }
+
+  .about-experience {
+    left: 16px !important;
+    bottom: 18px !important;
+  }
+
+  .about-feature-grid,
+  .about-stats,
+  .about-value-grid,
+  .about-process-grid,
+  .about-industries-grid,
+  .about-proof,
+  .about-cert-row,
+  .about-location-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-value-card {
+    grid-template-columns: 58px 1fr !important;
+    padding: 28px 22px !important;
+  }
+
+  .about-stats article {
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+  }
+
+  .about-why h2 {
+    font-size: 26px;
+  }
+
+  .about-why-list,
+  .about-why-visual {
+    grid-column: auto;
+  }
+
+  .about-proof-card:nth-child(2)::before {
+    display: none;
+  }
+
+  .about-cta {
+    width: calc(100% - 36px) !important;
+    padding: 26px 20px !important;
+  }
+}
+
+/* Header/footer must match the home page */
+.about-page .site-header {
+  position: relative !important;
+  z-index: 5 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  min-height: 0 !important;
+  padding: 44px 58px 20px !important;
+  border-bottom: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.about-page .brand {
+  min-width: clamp(210px, 22vw, 300px) !important;
+  min-height: 64px !important;
+}
+
+.about-page .brand::before {
+  width: clamp(210px, 22vw, 285px) !important;
+}
+
+.about-page .nav {
+  gap: 39px !important;
+}
+
+.about-page .nav a,
+.about-page .nav-dropdown-toggle {
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+}
+
+.about-page .quote-btn {
+  min-width: 150px !important;
+  height: 58px !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+}
+
+.about-page .quote-btn::before {
+  content: none !important;
+}
+
+.about-page .site-footer {
+  margin-top: 0 !important;
+  border-top: 0 !important;
+}
+
+.about-page .site-footer .footer-cta {
+  display: flex !important;
+}
+
+@media (max-width: 980px) {
+  .about-page .site-header {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-page .site-header {
+    width: 100% !important;
+    padding: 14px 16px !important;
+  }
+
+  .about-page .brand {
+    min-width: clamp(170px, 58vw, 220px) !important;
+    min-height: 50px !important;
+  }
+
+  .about-page .brand::before {
+    width: clamp(170px, 58vw, 220px) !important;
+  }
+}
+
+/* Final shared header visual */
+.about-page .site-header {
+  min-height: 116px !important;
+  padding: 30px 62px 25px !important;
+  border-bottom: 1px solid #edf1f7 !important;
+  background: #fff !important;
+}
+
+.about-page .brand {
+  min-width: 285px !important;
+  min-height: 70px !important;
+}
+
+.about-page .brand::before {
+  width: 285px !important;
+}
+
+.about-page .nav {
+  gap: clamp(24px, 3vw, 48px) !important;
+}
+
+.about-page .nav a,
+.about-page .nav-dropdown-toggle {
+  color: #050a16 !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.about-page .nav a.active,
+.about-page .nav-dropdown-toggle.active {
+  color: #062d67 !important;
+}
+
+.about-page .quote-btn {
+  min-width: 186px !important;
+  height: 58px !important;
+  border-radius: 999px !important;
+  background: #bd0713 !important;
+  font-size: 0 !important;
+}
+
+.about-page .quote-btn::before {
+  content: "Inquiry" !important;
+  font-size: 22px !important;
+}
+
+@media (max-width: 980px) {
+  .about-page .site-header {
+    min-height: 84px !important;
+    padding: 14px 22px !important;
+  }
+}
+
+/* About banner should match the clean Contact page banner */
+.about-page .about-hero {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 48px !important;
+  align-items: center !important;
+  min-height: 500px !important;
+  padding: 46px 56px 34px !important;
+  overflow: hidden !important;
+  text-align: left !important;
+  background: url("contact-bananr.png") center center / cover no-repeat !important;
+}
+
+.about-page .about-hero::before {
+  inset: 0 !important;
+  background: rgba(7, 31, 73, 0.1) !important;
+  pointer-events: none !important;
+}
+
+.about-page .about-hero::after,
+.about-page .about-hero-dots,
+.about-page .about-hero-badges,
+.about-page .about-hero-actions {
+  display: none !important;
+}
+
+.about-page .about-hero-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 980px !important;
+  margin-left: 112px !important;
+  color: #fff !important;
+}
+
+.about-page .about-kicker {
+  display: block !important;
+  margin: 0 0 18px !important;
+  color: var(--about-red) !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+}
+
+.about-page .about-kicker::before {
+  content: "" !important;
+  display: block !important;
+  width: 70px !important;
+  height: 3px !important;
+  margin: 0 0 28px !important;
+  border-radius: 99px !important;
+  background: var(--about-red) !important;
+}
+
+.about-page .about-hero h1 {
+  margin: 0 0 26px !important;
+  color: #fff !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: clamp(42px, 4.5vw, 68px) !important;
+  font-weight: 800 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -1.6px !important;
+  text-transform: uppercase !important;
+}
+
+.about-page .about-hero h1 .hero-line {
+  display: block !important;
+  white-space: nowrap !important;
+}
+
+.about-page .about-hero h1 .hero-line:last-child {
+  color: var(--about-red) !important;
+}
+
+.about-page .about-hero p {
+  max-width: 760px !important;
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: clamp(18px, 1.75vw, 24px) !important;
+  line-height: 1.52 !important;
+  font-weight: 400 !important;
+}
+
+.about-page .about-cta {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .about-page .about-hero {
+    padding: 56px 24px !important;
+  }
+
+  .about-page .about-hero-copy {
+    margin-left: 0 !important;
+  }
+}
+
+/* Premium redesign for About middle sections */
+.about-page .about-values,
+.about-page .about-why,
+.about-page .about-process,
+.about-page .about-industries,
+.about-page .about-proof {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+.about-page .about-values {
+  padding: 76px max(52px, calc((100vw - 1280px) / 2)) 64px !important;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(8, 47, 102, 0.08), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f7faff 100%) !important;
+}
+
+.about-page .about-value-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+}
+
+.about-page .about-value-card {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 76px 1fr !important;
+  gap: 20px !important;
+  min-height: 210px !important;
+  padding: 34px 34px 32px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(8, 47, 102, 0.11) !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  box-shadow: 0 24px 58px rgba(8, 31, 72, 0.08) !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease !important;
+}
+
+.about-page .about-value-card::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+  width: 5px !important;
+  height: auto !important;
+  background: linear-gradient(180deg, #e31b2b, #ff671f) !important;
+}
+
+.about-page .about-value-card::after {
+  content: "" !important;
+  position: absolute !important;
+  right: -42px !important;
+  top: -42px !important;
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
+  background: rgba(8, 47, 102, 0.06) !important;
+}
+
+.about-page .about-value-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(227, 27, 43, 0.2) !important;
+  box-shadow: 0 30px 68px rgba(8, 31, 72, 0.13) !important;
+}
+
+.about-page .about-value-card .about-icon {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 66px !important;
+  height: 66px !important;
+  margin: 0 !important;
+  border: 2px solid rgba(227, 27, 43, 0.18) !important;
+  border-radius: 18px !important;
+  background: #fff5f6 !important;
+  color: #e31b2b !important;
+  font-size: 34px !important;
+}
+
+.about-page .about-value-card h3 {
+  margin: 4px 0 20px !important;
+  color: #062d67 !important;
+  font-size: 22px !important;
+  line-height: 1.15 !important;
+  font-weight: 900 !important;
+}
+
+.about-page .about-value-card h3::after {
+  width: 44px !important;
+  height: 3px !important;
+  bottom: -11px !important;
+  background: #e31b2b !important;
+}
+
+.about-page .about-value-card p {
+  grid-column: 2 !important;
+  color: #26344a !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+.about-page .about-why {
+  display: grid !important;
+  grid-template-columns: minmax(360px, 0.78fr) minmax(520px, 1.22fr) !important;
+  gap: 58px !important;
+  align-items: center !important;
+  padding: 78px max(52px, calc((100vw - 1280px) / 2)) 88px !important;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%) !important;
+}
+
+.about-page .about-why h2 {
+  grid-column: 1 / -1 !important;
+  margin: 0 0 24px !important;
+  color: #062d67 !important;
+  font-size: clamp(36px, 3.6vw, 54px) !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
+.about-page .about-why h2::after,
+.about-page .about-heading::after,
+.about-page .about-proof-card h2::after {
+  width: 46px !important;
+  height: 3px !important;
+  margin-top: 18px !important;
+  background: #e31b2b !important;
+}
+
+.about-page .about-why-list {
+  display: grid !important;
+  gap: 14px !important;
+  padding: 28px !important;
+  border: 1px solid rgba(8, 47, 102, 0.1) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 22px 52px rgba(8, 31, 72, 0.07) !important;
+}
+
+.about-page .about-why-list article {
+  display: grid !important;
+  grid-template-columns: 54px 1fr !important;
+  gap: 16px !important;
+  align-items: center !important;
+  min-height: 62px !important;
+  padding: 8px 0 !important;
+}
+
+.about-page .about-why-list article + article {
+  border-top: 1px solid rgba(8, 47, 102, 0.08) !important;
+}
+
+.about-page .about-why-list span {
+  display: grid !important;
+  place-items: center !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 12px !important;
+  background: #eef5ff !important;
+  color: #062d67 !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+
+.about-page .about-why-list h3 {
+  margin: 0 0 4px !important;
+  color: #062d67 !important;
+  font-size: 18px !important;
+  line-height: 1.15 !important;
+  font-weight: 900 !important;
+}
+
+.about-page .about-why-list p {
+  margin: 0 !important;
+  color: #34445b !important;
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+
+.about-page .about-why-visual {
+  position: relative !important;
+  margin: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  min-height: 430px !important;
+  padding: 34px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(8, 47, 102, 0.1) !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(227, 27, 43, 0.12), transparent 24%),
+    linear-gradient(135deg, #ffffff 0%, #eef5ff 100%) !important;
+  box-shadow: 0 28px 70px rgba(8, 31, 72, 0.12) !important;
+}
+
+.about-page .about-why-visual::before {
+  content: "PTFE Lined Solutions" !important;
+  position: absolute !important;
+  left: 34px !important;
+  top: 30px !important;
+  z-index: 2 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 10px 16px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: #e31b2b !important;
+  color: #fff !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.about-page .about-why-visual::after {
+  content: "" !important;
+  position: absolute !important;
+  right: -72px !important;
+  bottom: -78px !important;
+  width: 240px !important;
+  height: 240px !important;
+  border-radius: 50% !important;
+  background: rgba(8, 47, 102, 0.08) !important;
+  z-index: 0 !important;
+}
+
+.about-page .about-why-visual img {
+  position: relative !important;
+  z-index: 1 !important;
+  width: min(100%, 760px) !important;
+  height: 330px !important;
+  padding: 18px !important;
+  border: 1px solid rgba(8, 47, 102, 0.1) !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  object-fit: contain !important;
+  box-shadow: 0 22px 56px rgba(8, 31, 72, 0.12) !important;
+}
+
+.about-page .about-process {
+  padding: 86px max(52px, calc((100vw - 1280px) / 2)) 90px !important;
+  background: #fff !important;
+}
+
+.about-page .about-process .about-heading h2,
+.about-page .about-industries .about-heading h2 {
+  color: #062d67 !important;
+  font-size: clamp(36px, 3.5vw, 56px) !important;
+  line-height: 1.08 !important;
+  font-weight: 900 !important;
+  text-align: center !important;
+}
+
+.about-page .about-process .about-heading h2 span,
+.about-page .about-industries .about-heading h2 span {
+  color: #e31b2b !important;
+}
+
+.about-page .about-process-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  margin-top: 54px !important;
+}
+
+.about-page .about-process-grid::before {
+  display: none !important;
+}
+
+.about-page .about-process-card {
+  position: relative !important;
+  min-height: 245px !important;
+  padding: 38px 22px 30px !important;
+  border: 1px solid rgba(8, 47, 102, 0.1) !important;
+  border-radius: 16px !important;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+  box-shadow: 0 20px 50px rgba(8, 31, 72, 0.07) !important;
+  text-align: center !important;
+}
+
+.about-page .about-process-card::after {
+  display: none !important;
+}
+
+.about-page .about-step {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 58px !important;
+  height: 58px !important;
+  margin: 0 auto 28px !important;
+  outline: 12px solid #f4f7fb !important;
+  border-radius: 50% !important;
+  background: #e31b2b !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.about-page .about-process-card h3 {
+  margin: 0 0 12px !important;
+  color: #062d67 !important;
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+}
+
+.about-page .about-process-card p {
+  color: #34445b !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+}
+
+.about-page .about-industries {
+  padding: 84px max(52px, calc((100vw - 1280px) / 2)) 76px !important;
+  background:
+    linear-gradient(180deg, #f8fbff 0%, #ffffff 100%) !important;
+}
+
+.about-page .about-industries-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  margin-top: 48px !important;
+}
+
+.about-page .about-industry-card {
+  min-height: 185px !important;
+  padding: 30px 22px 26px !important;
+  border: 1px solid rgba(8, 47, 102, 0.11) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 22px 54px rgba(8, 31, 72, 0.07) !important;
+  transition: transform 180ms ease, box-shadow 180ms ease !important;
+}
+
+.about-page .about-industry-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 30px 66px rgba(8, 31, 72, 0.12) !important;
+}
+
+.about-page .about-industry-card .about-icon {
+  width: 62px !important;
+  height: 62px !important;
+  margin: 0 auto 18px !important;
+  border-radius: 16px !important;
+  background: #eef5ff !important;
+  color: #062d67 !important;
+  font-size: 34px !important;
+}
+
+.about-page .about-industry-card h3 {
+  color: #062d67 !important;
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+}
+
+.about-page .about-proof {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 24px !important;
+  padding: 78px max(52px, calc((100vw - 1280px) / 2)) 86px !important;
+  background: #fff !important;
+}
+
+.about-page .about-proof-card {
+  min-height: 310px !important;
+  padding: 42px 38px !important;
+  border: 1px solid rgba(8, 47, 102, 0.11) !important;
+  border-radius: 16px !important;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+  box-shadow: 0 24px 58px rgba(8, 31, 72, 0.08) !important;
+}
+
+.about-page .about-proof-card h2 {
+  color: #062d67 !important;
+  font-size: 31px !important;
+  line-height: 1.1 !important;
+}
+
+.about-page .about-proof-card p {
+  max-width: 560px !important;
+  margin: 0 auto !important;
+  color: #34445b !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  text-align: center !important;
+}
+
+.about-page .about-cert-row {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 34px !important;
+}
+
+.about-page .about-cert-row span {
+  min-height: 128px !important;
+  padding: 10px 8px !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: #062d67 !important;
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+  box-shadow: inset 0 0 0 1px rgba(8, 47, 102, 0.08) !important;
+}
+
+.about-page .about-location-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px 28px !important;
+  max-width: 380px !important;
+  margin-top: 34px !important;
+}
+
+.about-page .about-location-row span {
+  min-height: 34px !important;
+  color: #062d67 !important;
+  font-size: 15px !important;
+}
+
+@media (max-width: 1180px) {
+  .about-page .about-value-grid,
+  .about-page .about-industries-grid,
+  .about-page .about-proof {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-page .about-why {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-page .about-why-list,
+  .about-page .about-why-visual {
+    grid-column: auto !important;
+  }
+
+  .about-page .about-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-page .about-why h2 {
+    white-space: normal !important;
+  }
+
+  .about-page .about-values,
+  .about-page .about-why,
+  .about-page .about-process,
+  .about-page .about-industries,
+  .about-page .about-proof {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .about-page .about-value-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-page .about-value-card p {
+    grid-column: auto !important;
+  }
+
+  .about-page .about-process-grid,
+  .about-page .about-cert-row,
+  .about-page .about-location-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-page .about-why-visual img {
+    height: 280px !important;
+  }
+}
+
+/* Section background variety for About page */
+.about-page .about-intro {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(227, 27, 43, 0.08), transparent 22%),
+    linear-gradient(135deg, #f7fbff 0%, #ffffff 48%, #fff6f7 100%) !important;
+}
+
+.about-page .about-stats {
+  background:
+    linear-gradient(90deg, rgba(0, 29, 73, 0.98), rgba(5, 63, 120, 0.96)),
+    radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.12), transparent 28%) !important;
+}
+
+.about-page .about-values {
+  background:
+    linear-gradient(135deg, #fff7f8 0%, #ffffff 45%, #eef5ff 100%) !important;
+}
+
+.about-page .about-why {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(8, 47, 102, 0.1), transparent 26%),
+    linear-gradient(180deg, #eef5ff 0%, #f9fbff 100%) !important;
+}
+
+.about-page .about-process {
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f4f8fd 50%, #fff8f9 100%) !important;
+}
+
+.about-page .about-industries {
+  background:
+    radial-gradient(circle at 12% 15%, rgba(227, 27, 43, 0.08), transparent 25%),
+    linear-gradient(180deg, #f2f7ff 0%, #ffffff 100%) !important;
+}
+
+.about-page .about-proof {
+  background:
+    linear-gradient(135deg, #fff8f9 0%, #ffffff 45%, #eef6ff 100%) !important;
+}
+
+/* Center process title across the full section width */
+.about-page .about-process .about-heading {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 auto 54px !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.about-page .about-process .about-heading h2 {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+.about-page .about-process .about-heading::after {
+  align-self: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 760px) {
+  .about-page .about-process .about-heading h2 {
+    white-space: normal !important;
+  }
+}
+
+/* Match About footer to Home footer teal design */
+.about-page .site-footer {
+  background:
+    linear-gradient(120deg, rgba(5, 48, 80, 0.98) 0%, rgba(9, 126, 124, 0.96) 48%, rgba(2, 75, 75, 0.98) 100%) !important;
+  border-top: 0 !important;
+}
+
+.about-page .site-footer::before {
+  background:
+    linear-gradient(118deg, transparent 0 16%, rgba(255, 255, 255, 0.08) 16% 16.15%, transparent 16.15% 100%),
+    radial-gradient(circle at 60% 18%, rgba(255, 255, 255, 0.08), transparent 28%) !important;
+}
+
+.about-page .site-footer .footer-cta {
+  display: none !important;
+}
+
+/* Mobile polish for About page */
+@media (max-width: 760px) {
+  html,
+  body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .about-page main {
+    overflow-x: hidden !important;
+    background:
+      linear-gradient(180deg, #f7fbff 0%, #ffffff 28%, #fff7f8 54%, #eef5ff 100%) !important;
+  }
+
+  .about-page .about-hero {
+    min-height: auto !important;
+    padding: 52px 22px 58px !important;
+    background-position: center !important;
+  }
+
+  .about-page .about-hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .about-page .about-kicker {
+    margin-bottom: 16px !important;
+    font-size: 12px !important;
+    letter-spacing: 4px !important;
+  }
+
+  .about-page .about-kicker::before {
+    width: 76px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .about-page .about-hero h1 {
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+    font-size: clamp(34px, 11vw, 46px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+
+  .about-page .about-hero h1 .hero-line {
+    white-space: normal !important;
+  }
+
+  .about-page .about-hero p {
+    max-width: 100% !important;
+    font-size: 19px !important;
+    line-height: 1.45 !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .about-page .about-intro {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+    padding: 42px 18px 54px !important;
+  }
+
+  .about-page .about-photo-wrap {
+    width: 100% !important;
+  }
+
+  .about-page .about-photo-wrap img {
+    width: 100% !important;
+    height: 260px !important;
+    border-radius: 18px !important;
+    object-fit: cover !important;
+  }
+
+  .about-page .about-experience {
+    left: 16px !important;
+    bottom: 16px !important;
+    width: 138px !important;
+    padding: 18px 16px !important;
+    border-radius: 10px !important;
+  }
+
+  .about-page .about-experience::before {
+    width: 34px !important;
+    height: 34px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .about-page .about-experience strong {
+    font-size: 42px !important;
+  }
+
+  .about-page .about-experience span {
+    font-size: 12px !important;
+  }
+
+  .about-page .about-copy {
+    padding: 26px 0 0 !important;
+    background: transparent !important;
+  }
+
+  .about-page .about-copy > .about-section-kicker {
+    justify-content: center !important;
+    font-size: 12px !important;
+    text-align: center !important;
+  }
+
+  .about-page .about-copy h2 {
+    display: block !important;
+    margin: 0 0 22px !important;
+    font-size: clamp(34px, 10vw, 44px) !important;
+    line-height: 1.05 !important;
+    text-align: left !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .about-page .about-copy h2 .about-title-line {
+    display: block !important;
+    text-align: left !important;
+  }
+
+  .about-page .about-copy > p {
+    font-size: 20px !important;
+    line-height: 1.48 !important;
+  }
+
+  .about-page .about-feature-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-top: 28px !important;
+  }
+
+  .about-page .about-feature-grid article {
+    grid-template-columns: 64px 1fr !important;
+    min-height: auto !important;
+    padding: 20px 18px !important;
+    border-radius: 12px !important;
+  }
+
+  .about-page .about-feature-grid h3 {
+    font-size: 21px !important;
+  }
+
+  .about-page .about-feature-grid p {
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+  }
+
+  .about-page .about-stats {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    padding: 42px 22px !important;
+  }
+
+  .about-page .about-stats article {
+    grid-template-columns: 76px 1fr !important;
+    gap: 18px !important;
+    padding: 20px 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+  }
+
+  .about-page .about-stats article:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .about-page .about-stats span {
+    width: 62px !important;
+    height: 62px !important;
+    font-size: 34px !important;
+  }
+
+  .about-page .about-stats strong {
+    font-size: 42px !important;
+  }
+
+  .about-page .about-stats p {
+    font-size: 19px !important;
+    line-height: 1.28 !important;
+  }
+
+  .about-page .about-values,
+  .about-page .about-why,
+  .about-page .about-process,
+  .about-page .about-industries,
+  .about-page .about-proof {
+    padding: 54px 14px !important;
+  }
+
+  .about-page .about-value-grid,
+  .about-page .about-industries-grid,
+  .about-page .about-proof,
+  .about-page .about-process-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .about-page .about-value-card {
+    min-height: auto !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 28px 24px !important;
+    border-radius: 14px !important;
+  }
+
+  .about-page .about-value-card .about-icon {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .about-page .about-value-card h3 {
+    font-size: 28px !important;
+  }
+
+  .about-page .about-value-card p {
+    grid-column: auto !important;
+    font-size: 20px !important;
+    line-height: 1.48 !important;
+  }
+
+  .about-page .about-why {
+    gap: 28px !important;
+  }
+
+  .about-page .about-why h2,
+  .about-page .about-process .about-heading h2,
+  .about-page .about-industries .about-heading h2 {
+    max-width: 100% !important;
+    font-size: clamp(30px, 8.5vw, 38px) !important;
+    line-height: 1.06 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .about-page .about-why-list {
+    padding: 18px !important;
+    border-radius: 14px !important;
+  }
+
+  .about-page .about-why-list article {
+    grid-template-columns: 42px 1fr !important;
+    gap: 12px !important;
+    min-height: auto !important;
+    padding: 12px 0 !important;
+  }
+
+  .about-page .about-why-list span {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+  }
+
+  .about-page .about-why-list h3 {
+    font-size: 16px !important;
+  }
+
+  .about-page .about-why-list p {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+  }
+
+  .about-page .about-why-visual {
+    min-height: auto !important;
+    padding: 56px 16px 18px !important;
+    border-radius: 16px !important;
+  }
+
+  .about-page .about-why-visual::before {
+    left: 18px !important;
+    top: 18px !important;
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+  }
+
+  .about-page .about-why-visual img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 245px !important;
+    padding: 10px !important;
+    object-fit: contain !important;
+  }
+
+  .about-page .about-process-card {
+    min-height: auto !important;
+    padding: 30px 22px !important;
+    border-radius: 14px !important;
+  }
+
+  .about-page .about-step {
+    width: 58px !important;
+    height: 58px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .about-page .about-process-card h3 {
+    font-size: 18px !important;
+  }
+
+  .about-page .about-process-card p {
+    font-size: 15px !important;
+  }
+
+  .about-page .about-industry-card {
+    min-height: 136px !important;
+    padding: 26px 18px !important;
+    border-radius: 14px !important;
+  }
+
+  .about-page .about-proof-card {
+    min-height: auto !important;
+    padding: 30px 18px !important;
+    border-radius: 14px !important;
+  }
+
+  .about-page .about-proof-card h2 {
+    font-size: 31px !important;
+  }
+
+  .about-page .about-proof-card p {
+    font-size: 15px !important;
+  }
+
+  .about-page .about-cert-row,
+  .about-page .about-location-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .about-page .about-cert-row span {
+    min-height: 92px !important;
+  }
+}

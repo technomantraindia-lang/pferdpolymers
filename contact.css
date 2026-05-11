@@ -1828,6 +1828,177 @@
   }
 }
 
+/* Header/footer must match the home page */
+.contact-page .site-header {
+  position: relative !important;
+  z-index: 5 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  min-height: 0 !important;
+  padding: 44px 58px 20px !important;
+  border-bottom: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.contact-page .site-footer {
+  margin-top: 0 !important;
+  border-top: 0 !important;
+}
+
+.contact-page .footer-cta {
+  display: flex !important;
+  border-top-width: 5px !important;
+}
+
+@media (max-width: 980px) {
+  .contact-page .site-header {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-page .site-header {
+    width: 100% !important;
+    padding: 14px 16px !important;
+  }
+}
+
+/* Final shared header visual */
+.contact-page .site-header {
+  min-height: 116px !important;
+  padding: 30px 62px 25px !important;
+  border-bottom: 1px solid #edf1f7 !important;
+  background: #fff !important;
+}
+
+.contact-page .brand {
+  min-width: 285px !important;
+  min-height: 70px !important;
+}
+
+.contact-page .brand::before {
+  width: 285px !important;
+}
+
+.contact-page .nav {
+  gap: clamp(24px, 3vw, 48px) !important;
+}
+
+.contact-page .nav a,
+.contact-page .nav-dropdown-toggle {
+  color: #050a16 !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.contact-page .nav a.active,
+.contact-page .nav-dropdown-toggle.active {
+  color: #062d67 !important;
+}
+
+.contact-page .quote-btn {
+  min-width: 186px !important;
+  height: 58px !important;
+  border-radius: 999px !important;
+  background: #bd0713 !important;
+}
+
+@media (max-width: 980px) {
+  .contact-page .site-header {
+    min-height: 84px !important;
+    padding: 14px 22px !important;
+  }
+}
+
+/* Match About page clean banner */
+.contact-page .contact-hero {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 48px !important;
+  align-items: center !important;
+  min-height: 500px !important;
+  padding: 46px 56px 34px !important;
+  overflow: hidden !important;
+  text-align: left !important;
+  background: url("contact-bananr.png") center center / cover no-repeat !important;
+}
+
+.contact-page .contact-hero::before {
+  inset: 0 !important;
+  background: rgba(7, 31, 73, 0.1) !important;
+  pointer-events: none !important;
+}
+
+.contact-page .contact-hero::after,
+.contact-page .contact-hero-card {
+  display: none !important;
+}
+
+.contact-page .contact-hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 980px !important;
+  margin-left: 112px !important;
+  color: #fff !important;
+}
+
+.contact-page .contact-kicker {
+  display: block !important;
+  margin: 0 0 18px !important;
+  color: var(--red) !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+}
+
+.contact-page .contact-kicker::before {
+  content: "" !important;
+  display: block !important;
+  width: 70px !important;
+  height: 3px !important;
+  margin: 0 0 28px !important;
+  border-radius: 99px !important;
+  background: var(--red) !important;
+}
+
+.contact-page .contact-hero h1 {
+  margin: 0 0 26px !important;
+  color: #fff !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: clamp(48px, 5.3vw, 82px) !important;
+  font-weight: 800 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -1.6px !important;
+  text-transform: uppercase !important;
+}
+
+.contact-page .contact-intro {
+  max-width: 760px !important;
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: clamp(18px, 1.75vw, 24px) !important;
+  line-height: 1.52 !important;
+  font-weight: 400 !important;
+}
+
+@media (max-width: 900px) {
+  .contact-page .contact-hero {
+    padding: 56px 24px !important;
+  }
+
+  .contact-page .contact-hero-content {
+    margin-left: 0 !important;
+  }
+}
+
 /* Keep contact heading in exactly two lines */
 .contact-form-wrapper {
   grid-template-columns: minmax(430px, 0.82fr) minmax(620px, 1.18fr) !important;
