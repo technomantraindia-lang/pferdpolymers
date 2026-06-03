@@ -10425,11 +10425,17 @@ body.inquiry-open {
   max-height: min(92vh, 940px) !important;
   padding: 0 !important;
   overflow: hidden auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   border: 1px solid rgba(205, 218, 235, 0.95) !important;
   border-radius: 24px !important;
   background:
     linear-gradient(180deg, #ffffff 0%, #f7faff 100%) !important;
   box-shadow: 0 34px 90px rgba(5, 18, 42, 0.34) !important;
+}
+
+.inquiry-dialog::-webkit-scrollbar {
+  display: none !important;
 }
 
 .inquiry-dialog::before {
