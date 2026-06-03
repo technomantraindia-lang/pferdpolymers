@@ -2113,3 +2113,344 @@
 .contact-page .contact-form-left > p {
   font-weight: 400 !important;
 }
+
+/* Final responsive system for Contact page */
+.contact-page {
+  overflow-x: hidden !important;
+}
+
+.contact-page :where(.contact-hero, .contact-quick-info, .contact-form-section, .contact-why-section, .contact-map-section, .contact-cta-section, .site-footer) {
+  max-width: 100% !important;
+}
+
+@media (max-width: 1440px) {
+  .contact-page .contact-hero,
+  .contact-page .contact-form-section,
+  .contact-page .contact-why-section,
+  .contact-page .contact-map-section,
+  .contact-page .contact-cta-section {
+    padding-left: clamp(24px, 3.4vw, 54px) !important;
+    padding-right: clamp(24px, 3.4vw, 54px) !important;
+  }
+
+  .contact-page .quick-info-grid,
+  .contact-page .contact-form-wrapper,
+  .contact-page .why-grid,
+  .contact-page .map-container {
+    max-width: 1180px !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .contact-page .site-header {
+    min-height: 84px !important;
+    padding: 14px 22px !important;
+  }
+
+  .contact-page .contact-hero {
+    min-height: 430px !important;
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .contact-page .contact-hero-content {
+    margin-left: 0 !important;
+    max-width: 760px !important;
+  }
+
+  .contact-page .quick-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .contact-page .quick-info-card {
+    min-height: 128px !important;
+  }
+
+  .contact-page .contact-form-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+
+  .contact-page .contact-form-left {
+    max-width: 820px !important;
+    margin: 0 auto !important;
+    text-align: left !important;
+  }
+
+  .contact-page .contact-form-left h2 {
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .contact-page .contact-desc {
+    max-width: 720px !important;
+  }
+
+  .contact-page .contact-product-image {
+    max-width: 720px !important;
+  }
+
+  .contact-page .contact-form-right::before {
+    inset: 0 !important;
+  }
+
+  .contact-page .contact-form-panel {
+    width: min(100%, 820px) !important;
+    margin: 0 auto !important;
+  }
+
+  .contact-page .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .contact-page .contact-cta-section {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .contact-page .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-page .contact-hero {
+    min-height: 390px !important;
+    padding: 58px 22px !important;
+    background-position: center !important;
+  }
+
+  .contact-page .contact-hero::before {
+    background: linear-gradient(90deg, rgba(4, 22, 58, 0.88), rgba(4, 22, 58, 0.58)) !important;
+  }
+
+  .contact-page .contact-hero h1 {
+    font-size: clamp(42px, 8vw, 62px) !important;
+    line-height: 1.02 !important;
+  }
+
+  .contact-page .contact-intro {
+    max-width: 620px !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .contact-page .contact-quick-info,
+  .contact-page .contact-form-section,
+  .contact-page .contact-why-section,
+  .contact-page .contact-map-section,
+  .contact-page .contact-cta-section {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .contact-page .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .contact-page .contact-form-head {
+    align-items: flex-start !important;
+  }
+
+  .contact-page .map-container iframe {
+    height: 300px !important;
+  }
+
+  .contact-page .cta-content {
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-page .site-header {
+    width: 100% !important;
+    padding: 12px 16px !important;
+  }
+
+  .contact-page .contact-hero {
+    min-height: 330px !important;
+    padding: 46px 16px !important;
+  }
+
+  .contact-page .contact-kicker {
+    font-size: 12px !important;
+    letter-spacing: 1.6px !important;
+  }
+
+  .contact-page .contact-kicker::before {
+    width: 48px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .contact-page .contact-hero h1 {
+    margin-bottom: 16px !important;
+    font-size: clamp(34px, 11vw, 48px) !important;
+    letter-spacing: 0 !important;
+  }
+
+  .contact-page .contact-intro br {
+    display: none !important;
+  }
+
+  .contact-page .contact-quick-info,
+  .contact-page .contact-form-section,
+  .contact-page .contact-why-section,
+  .contact-page .contact-map-section,
+  .contact-page .contact-cta-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .contact-page .quick-info-grid,
+  .contact-page .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .contact-page .quick-info-card {
+    grid-template-columns: 50px 1fr !important;
+    min-height: 0 !important;
+    padding: 18px !important;
+  }
+
+  .contact-page .quick-info-card h3 {
+    font-size: 17px !important;
+  }
+
+  .contact-page .quick-info-card p {
+    max-width: none !important;
+    font-size: 14px !important;
+  }
+
+  .contact-page .contact-form-section {
+    padding-top: 46px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .contact-page .contact-form-left {
+    gap: 14px !important;
+  }
+
+  .contact-page .contact-form-left h2 {
+    font-size: clamp(31px, 9vw, 42px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .contact-page .contact-desc {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  .contact-page .contact-product-image {
+    margin: 8px 0 !important;
+  }
+
+  .contact-page .contact-product-image img {
+    height: auto !important;
+    max-height: 240px !important;
+    object-fit: contain !important;
+  }
+
+  .contact-page .contact-info-item {
+    padding: 15px !important;
+  }
+
+  .contact-page .contact-form-panel {
+    padding: 22px 16px 24px !important;
+    border-radius: 14px !important;
+  }
+
+  .contact-page .contact-form-head {
+    gap: 12px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .contact-page .form-head-icon {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 22px !important;
+  }
+
+  .contact-page .contact-inquiry-form input,
+  .contact-page .contact-inquiry-form select,
+  .contact-page .contact-inquiry-form textarea {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 13px 14px !important;
+    font-size: 14px !important;
+  }
+
+  .contact-page .contact-inquiry-form textarea {
+    min-height: 120px !important;
+  }
+
+  .contact-page .why-card {
+    padding: 26px 20px !important;
+  }
+
+  .contact-page .contact-map-section h2,
+  .contact-page .contact-map-section::before {
+    font-size: 24px !important;
+  }
+
+  .contact-page .map-container iframe {
+    height: 250px !important;
+  }
+
+  .contact-page .contact-cta-section {
+    padding-top: 36px !important;
+    padding-bottom: 38px !important;
+    gap: 24px !important;
+  }
+
+  .contact-page .cta-content {
+    display: grid !important;
+    grid-template-columns: 52px 1fr !important;
+    gap: 14px !important;
+  }
+
+  .contact-page .cta-icon {
+    min-width: 0 !important;
+    font-size: 40px !important;
+  }
+
+  .contact-page .contact-cta-section h2 {
+    font-size: 25px !important;
+  }
+
+  .contact-page .cta-actions,
+  .contact-page .cta-btn {
+    width: 100% !important;
+  }
+
+  .contact-page .footer-main {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-page .contact-hero {
+    min-height: 300px !important;
+  }
+
+  .contact-page .quick-info-card,
+  .contact-page .contact-info-item,
+  .contact-page .contact-form-head,
+  .contact-page .cta-content {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    justify-items: center !important;
+  }
+
+  .contact-page .quick-info-card h3::after,
+  .contact-page .contact-form-left h2::after {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .contact-page .contact-form-left,
+  .contact-page .contact-desc {
+    text-align: center !important;
+  }
+}

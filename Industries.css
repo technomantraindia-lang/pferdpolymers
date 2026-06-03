@@ -369,7 +369,7 @@
 .solution-card {
   position: relative;
   min-height: 285px;
-  padding: 30px 28px 28px 106px;
+  padding: 32px 30px 30px 112px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 14px;
@@ -408,53 +408,53 @@
   top: 28px;
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: var(--industry-blue);
   color: #fff;
-  font-size: 27px;
+  font-size: 30px;
   box-shadow: 0 12px 24px rgba(6, 45, 103, 0.2);
 }
 
 .solution-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: var(--industry-blue);
-  font-size: 18px;
+  font-size: 21px;
   line-height: 1.22;
   font-weight: 900;
 }
 
 .solution-card p {
-  margin: 0 0 13px;
+  margin: 0 0 15px;
   color: #37465d;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 15.5px;
+  line-height: 1.58;
   font-weight: 600;
 }
 
 .solution-card strong {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: var(--industry-red);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 900;
 }
 
 .solution-card ul {
   display: grid;
-  gap: 5px;
-  margin: 0 0 18px;
+  gap: 7px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .solution-card li {
   position: relative;
-  padding-left: 13px;
+  padding-left: 15px;
   color: #29384e;
-  font-size: 13px;
-  line-height: 1.35;
+  font-size: 14.5px;
+  line-height: 1.42;
   font-weight: 650;
 }
 
@@ -1166,6 +1166,48 @@
   border-bottom: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
+}
+
+/* Final polish for Industry Solutions cards */
+.industries-page .solution-card {
+  min-height: 300px !important;
+  padding: 34px 32px 32px 116px !important;
+}
+
+.industries-page .solution-icon {
+  width: 66px !important;
+  height: 66px !important;
+  font-size: 31px !important;
+}
+
+.industries-page .solution-card h3 {
+  font-size: 22px !important;
+  line-height: 1.18 !important;
+}
+
+.industries-page .solution-card p {
+  font-size: 16px !important;
+  line-height: 1.58 !important;
+}
+
+.industries-page .solution-card strong {
+  font-size: 15px !important;
+}
+
+.industries-page .solution-card li {
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+
+.industries-page .solution-card a {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .industries-page .solution-card {
+    min-height: auto !important;
+    padding: 108px 22px 28px !important;
+  }
 }
 
 .industries-page .site-footer {

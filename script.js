@@ -30,6 +30,91 @@ document.querySelectorAll(".product-section .product-card").forEach((card) => {
   });
 });
 
+const bannerCarousel = document.querySelector("[data-banner-carousel]");
+
+if (bannerCarousel) {
+  const track = bannerCarousel.querySelector("[data-banner-track]");
+  const dotsWrap = bannerCarousel.querySelector("[data-banner-dots]");
+  const prevButton = bannerCarousel.querySelector("[data-banner-prev]");
+  const nextButton = bannerCarousel.querySelector("[data-banner-next]");
+  const slides = Array.from(track?.querySelectorAll(".banner-slide") || []);
+  let activeBanner = 0;
+  let bannerTimer;
+
+  if (track && slides.length > 0) {
+    const firstClone = slides[0].cloneNode(true);
+    firstClone.classList.remove("is-active");
+    firstClone.setAttribute("aria-hidden", "true");
+    track.appendChild(firstClone);
+
+    const dots = slides.map((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Show banner ${index + 1}`);
+      dot.addEventListener("click", () => {
+        showBanner(index);
+        restartBanner();
+      });
+      dotsWrap?.appendChild(dot);
+      return dot;
+    });
+
+    const updateBannerState = () => {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("is-active", index === activeBanner);
+      });
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === activeBanner);
+      });
+    };
+
+    const moveTrack = (index) => {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    const showBanner = (index) => {
+      activeBanner = (index + slides.length) % slides.length;
+      moveTrack(activeBanner);
+      updateBannerState();
+    };
+
+    const nextBanner = () => {
+      if (activeBanner === slides.length - 1) {
+        activeBanner = 0;
+        moveTrack(slides.length);
+        updateBannerState();
+        window.setTimeout(() => {
+          track.classList.add("is-resetting");
+          moveTrack(0);
+          track.offsetHeight;
+          track.classList.remove("is-resetting");
+        }, 860);
+        return;
+      }
+
+      showBanner(activeBanner + 1);
+    };
+
+    const restartBanner = () => {
+      window.clearInterval(bannerTimer);
+      bannerTimer = window.setInterval(nextBanner, 3600);
+    };
+
+    prevButton?.addEventListener("click", () => {
+      showBanner(activeBanner - 1);
+      restartBanner();
+    });
+
+    nextButton?.addEventListener("click", () => {
+      nextBanner();
+      restartBanner();
+    });
+
+    updateBannerState();
+    restartBanner();
+  }
+}
+
 const testimonialCard = document.querySelector(".testimonial-card");
 
 if (testimonialCard) {
@@ -169,7 +254,7 @@ if (productGallery) {
     const activeThumb = thumbnails[activeImageIndex];
 
     mainImage.src = activeThumb.src;
-    mainImage.alt = activeThumb.alt || "PTFE / PFA / FEP lined pipes";
+    mainImage.alt = activeThumb.alt || "PTFE Lined pipes";
 
     thumbnails.forEach((thumb) => thumb.classList.remove("active"));
     activeThumb.classList.add("active");

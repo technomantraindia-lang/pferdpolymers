@@ -809,7 +809,7 @@
   padding: 70px max(56px, calc((100vw - 1280px) / 2)) 72px !important;
   background:
     linear-gradient(90deg, rgba(0, 25, 62, 0.98) 0%, rgba(0, 31, 77, 0.93) 38%, rgba(0, 31, 77, 0.56) 72%, rgba(0, 31, 77, 0.42) 100%),
-    url("Home Photos/HOME PAGE 4.jpg") center right / cover no-repeat !important;
+    url("contact-bananr.png") center right / cover no-repeat !important;
 }
 
 .about-hero::before {
@@ -1486,7 +1486,7 @@
   border-radius: 8px !important;
   background:
     linear-gradient(90deg, rgba(0, 25, 62, 0.98), rgba(0, 31, 77, 0.91)),
-    url("Home Photos/HOME PAGE 11.jpg") center / cover no-repeat !important;
+    url("home page product photos/testmiori.png") center / cover no-repeat !important;
 }
 
 .about-cta h2 {
@@ -2772,5 +2772,76 @@
 
   .about-page .about-cert-row span {
     min-height: 92px !important;
+  }
+}
+
+/* Final typography polish for About page info boxes */
+.about-page .about-feature-grid article {
+  min-height: 148px !important;
+  grid-template-columns: 74px 1fr !important;
+  gap: 22px !important;
+  padding: 26px 28px !important;
+}
+
+.about-page .about-feature-grid .about-icon {
+  width: 68px !important;
+  height: 68px !important;
+  font-size: 28px !important;
+}
+
+.about-page .about-feature-grid h3 {
+  font-size: 22px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 9px !important;
+}
+
+.about-page .about-feature-grid p {
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+}
+
+.about-page .about-stats article {
+  grid-template-columns: 76px 1fr !important;
+  gap: 22px !important;
+}
+
+.about-page .about-stats span {
+  width: 72px !important;
+  height: 72px !important;
+  font-size: 34px !important;
+}
+
+.about-page .about-stats strong {
+  font-size: 38px !important;
+  line-height: 0.95 !important;
+}
+
+.about-page .about-stats p {
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+}
+
+.about-page .about-value-card h3 {
+  font-size: 25px !important;
+  line-height: 1.18 !important;
+}
+
+.about-page .about-value-card p {
+  font-size: 18px !important;
+  line-height: 1.58 !important;
+}
+
+@media (max-width: 760px) {
+  .about-page .about-feature-grid article {
+    grid-template-columns: 62px 1fr !important;
+    gap: 16px !important;
+    padding: 20px 18px !important;
+  }
+
+  .about-page .about-feature-grid .about-icon {
+    width: 58px !important;
+    height: 58px !important;
+    font-size: 24px !important;
   }
 }
