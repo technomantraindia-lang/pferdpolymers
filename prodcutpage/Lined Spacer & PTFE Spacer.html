@@ -3,13 +3,301 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lined Elbow / Bend | Pferd Polymers</title>
+  <title>Lined Spacer &amp; PTFE Spacer | Pferd Polymers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
+  <style>
+    body.spacer-page {
+      background:
+        linear-gradient(180deg, #eef3f9 0%, #f7f9fc 52%, #eef3f8 100%);
+    }
+
+    .spacer-page .spacer-shell {
+      overflow: hidden;
+      padding-bottom: 24px;
+    }
+
+    .spacer-page .spacer-breadcrumb {
+      width: min(1240px, calc(100% - 72px));
+      margin: 0 auto;
+      padding: 24px 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #6b7688;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .spacer-page .spacer-breadcrumb a {
+      color: #536176;
+      text-decoration: none;
+    }
+
+    .spacer-page .spacer-breadcrumb strong {
+      color: #082f66;
+    }
+
+    .spacer-page .spacer-hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+      gap: 44px;
+      width: min(1240px, calc(100% - 72px));
+      margin: 0 auto 64px;
+      padding: 42px;
+      overflow: hidden;
+      border: 1px solid rgba(205, 217, 232, 0.9);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 91% 8%, rgba(209, 17, 30, 0.11), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #edf3fa 100%);
+      box-shadow: 0 22px 58px rgba(8, 47, 102, 0.11);
+    }
+
+    .spacer-page .spacer-hero::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -170px;
+      bottom: -190px;
+      border: 54px solid rgba(8, 47, 102, 0.05);
+      border-radius: 50%;
+    }
+
+    .spacer-page .spacer-visual,
+    .spacer-page .spacer-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .spacer-page .spacer-visual {
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      padding: 26px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .spacer-page .spacer-visual img {
+      position: relative;
+      z-index: 1;
+      width: min(82%, 390px);
+      max-height: 350px;
+      object-fit: contain;
+      border-radius: 3px;
+      filter: drop-shadow(0 18px 20px rgba(13, 39, 74, 0.17));
+    }
+
+    .spacer-page .spacer-badge {
+      position: absolute;
+      top: 10px;
+      left: 8%;
+      z-index: 3;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #082f66;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .spacer-page .spacer-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: #c50c18;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .spacer-page .spacer-kicker::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .spacer-page .spacer-copy {
+      align-self: center;
+    }
+
+    .spacer-page .spacer-copy h1 {
+      max-width: 570px;
+      margin: 0 0 28px;
+      color: #082f66;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: clamp(50px, 5.7vw, 74px);
+      line-height: 0.94;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+    }
+
+    .spacer-page .spacer-copy h1 span {
+      color: #d1111e;
+    }
+
+    .spacer-page .spacer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .spacer-page .spacer-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .spacer-page .spacer-actions .primary {
+      background: linear-gradient(135deg, #d1111e, #a90612);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(209, 17, 30, 0.22);
+    }
+
+    .spacer-page .spacer-actions .secondary {
+      border: 1px solid #b8c6d8;
+      background: #fff;
+      color: #082f66;
+    }
+
+    .spacer-page .spacer-section {
+      width: min(1240px, calc(100% - 72px));
+      margin: 0 auto 64px;
+    }
+
+    .spacer-page .spacer-section-head {
+      max-width: 700px;
+      margin-bottom: 26px;
+    }
+
+    .spacer-page .spacer-section-head h2 {
+      margin: 0 0 10px;
+      color: #082f66;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .spacer-page .spacer-section-head p {
+      margin: 0;
+      color: #657187;
+      line-height: 1.7;
+    }
+
+    .spacer-page .spacer-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .spacer-page .spacer-card {
+      position: relative;
+      min-height: 350px;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 34px;
+      overflow: hidden;
+      border: 1px solid #dde6f0;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 15px 36px rgba(8, 47, 102, 0.085);
+    }
+
+    .spacer-page .spacer-card img {
+      width: 100%;
+      height: 285px;
+      object-fit: contain;
+      transition: transform 0.35s ease;
+    }
+
+    .spacer-page .spacer-card:hover img {
+      transform: scale(1.035);
+    }
+
+    .spacer-page .spacer-card figcaption {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      padding: 8px 13px;
+      border-radius: 9px;
+      background: rgba(8, 47, 102, 0.92);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .spacer-page .spacer-hero {
+        grid-template-columns: 1fr;
+        padding: 34px;
+      }
+
+      .spacer-page .spacer-visual {
+        min-height: 390px;
+      }
+
+      .spacer-page .spacer-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .spacer-page .spacer-breadcrumb,
+      .spacer-page .spacer-hero,
+      .spacer-page .spacer-section {
+        width: min(100% - 32px, 1240px);
+      }
+
+      .spacer-page .spacer-hero {
+        gap: 28px;
+        margin-bottom: 48px;
+        padding: 22px;
+        border-radius: 20px;
+      }
+
+      .spacer-page .spacer-visual {
+        min-height: 300px;
+        padding: 24px;
+      }
+
+      .spacer-page .spacer-copy h1 {
+        font-size: 46px;
+      }
+
+      .spacer-page .spacer-card {
+        min-height: 300px;
+        padding: 20px;
+      }
+
+      .spacer-page .spacer-card img {
+        height: 260px;
+      }
+
+    }
+  </style>
 </head>
-<body class="product-detail-page">
+<body class="product-detail-page spacer-page">
   <header class="site-header">
       <a class="brand" href="../index.html" aria-label="Pferd Polymers Home">
         <span class="brand-mark">
@@ -109,46 +397,88 @@
       </aside>
   </header>
 
-  <main>
+  <main class="spacer-shell">
+    <nav class="spacer-breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>&rsaquo;</span>
+      <a href="../Lined-fitting.html">Lined Fittings</a>
+      <span>&rsaquo;</span>
+      <strong>Lined Spacer &amp; PTFE Spacer</strong>
+    </nav>
+
+    <section class="spacer-hero" aria-labelledby="spacer-title">
+      <div class="spacer-visual">
+        <span class="spacer-badge">Product Image</span>
+        <img src="../home page product photos/PTFE PRODUCTS/210. Lined Spacer &amp; PTFE Spacer/210. Lined Spacer and PTFE Spacer.jpg" alt="Lined spacer and PTFE spacer product view">
+      </div>
+
+      <div class="spacer-copy">
+        <p class="spacer-kicker">Lined Fittings</p>
+        <h1 id="spacer-title">Lined Spacer <span>&amp; PTFE Spacer</span></h1>
+        <div class="spacer-actions">
+          <a class="primary inquiry-trigger" href="#inquiry-modal">Inquiry &rarr;</a>
+          <a class="secondary" href="../Lined-fitting.html">Back to Lined Fittings</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="spacer-section" aria-labelledby="spacer-gallery-title">
+      <header class="spacer-section-head">
+        <p class="spacer-kicker">Image Gallery</p>
+        <h2 id="spacer-gallery-title">Product Images</h2>
+      </header>
+
+      <div class="spacer-gallery">
+        <figure class="spacer-card">
+          <img src="../home page product photos/PTFE PRODUCTS/210. Lined Spacer &amp; PTFE Spacer/210. Lined Spacer and PTFE Spacer.jpg" alt="Lined spacer and PTFE spacer">
+          <figcaption>Lined Spacer</figcaption>
+        </figure>
+        <figure class="spacer-card">
+          <img src="../home page product photos/PTFE PRODUCTS/210. Lined Spacer &amp; PTFE Spacer/Solid Spacer for Lined Pipes.jpg" alt="Solid spacer for lined pipes">
+          <figcaption>Solid Spacer</figcaption>
+        </figure>
+        <figure class="spacer-card">
+          <img src="../home page product photos/PTFE PRODUCTS/210. Lined Spacer &amp; PTFE Spacer/210. GA Drawing Lined Spacer and PTFE Spacer.jpg" alt="Lined spacer and PTFE spacer general arrangement drawing">
+          <figcaption>GA Drawing</figcaption>
+        </figure>
+      </div>
+    </section>
+    <template aria-hidden="true">
     <section class="product-breadcrumb">
       <a href="../index.html">Home</a>
       <span>&rsaquo;</span>
       <a href="../Lined-fitting.html">Lined Fittings</a>
       <span>&rsaquo;</span>
-      <strong>Lined Elbow / Bend</strong>
+      <strong>Lined Blind Flange</strong>
     </section>
 
     <section class="product-detail-hero">
-     
-      
       <div class="product-gallery">
         <figure class="product-main-image">
-          <img src="../home page product photos/PTFE PRODUCTS/21. Lined elbow - bend/2.PTFE LINED ELBOW.jpg" alt="PTFE lined elbow">
+          <img src="../home page product photos/PTFE PRODUCTS/28. Lined Blind Flange/28. PTFE LINED BLIND FLANGE.jpg" alt="PTFE lined blind flange">
         </figure>
         <div class="product-thumbs" aria-label="Product image thumbnails">
           <button type="button" aria-label="Previous image">&lsaquo;</button>
-          <img class="active" src="../home page product photos/PTFE PRODUCTS/21. Lined elbow - bend/2.PTFE LINED ELBOW.jpg" alt="">
-          <img src="../home page product photos/PTFE PRODUCTS/21. Lined elbow - bend/PTFE LINED BEND.jpg" alt="">
-          <img src="../home page product photos/PTFE PRODUCTS/21. Lined elbow - bend/SS PTFE LINED BEND - ELBOW.jpg" alt="">
-          <img src="../home page product photos/PTFE PRODUCTS/21. Lined elbow - bend/HDPE LINED ELBOW.jpg" alt="">
+          <img class="active" src="../home page product photos/PTFE PRODUCTS/28. Lined Blind Flange/28. PTFE LINED BLIND FLANGE.jpg" alt="">
+          <img src="../home page product photos/PTFE PRODUCTS/28. Lined Blind Flange/28. GA DRAWING LINED BLIND FLANGE.jpg" alt="">
           <button type="button" aria-label="Next image">&rsaquo;</button>
         </div>
       </div>
 
       <div class="product-detail-copy">
         <p class="product-kicker">Lined Fittings</p>
-        <h1>Lined Elbow / Bend</h1>
+        <h1>Lined Blind Flange</h1>
         <i></i>
         <p class="product-intro">
-          Pferd Polymers manufactures and supplies PTFE lined bends and elbows in
-          90&deg; and 45&deg; configurations, using high-quality paste-extruded PTFE liners
-          manufactured in accordance with ASTM F1545.
+          Pferd Polymers manufactures and supplies PTFE / FEP / PFA lined blind
+          flanges in various sizes for reliable pipeline isolation in corrosive
+          process applications.
         </p>
 
         <dl class="product-highlights">
-          <div><dt>Available Sizes:</dt><dd>20 NB to 300 NB (3/4&quot; to 12&quot;)</dd></div>
-          <div><dt>Available Angles:</dt><dd>90&deg; / 45&deg;</dd></div>
-          <div><dt>Lining Materials:</dt><dd>PTFE / Antistatic PTFE</dd></div>
+          <div><dt>Available Sizes:</dt><dd>15 NB to 300 NB (1/2&quot; to 12&quot;)</dd></div>
+          <div><dt>Product Type:</dt><dd>Lined Blind Flange</dd></div>
+          <div><dt>Lining Materials:</dt><dd>PFA / FEP / HDPE</dd></div>
           <div><dt>Lining Standard:</dt><dd>ASTM F1545</dd></div>
           <div><dt>Pressure Rating:</dt><dd>ASA 150# / 300# / DIN / Table F</dd></div>
           <div><dt>Temperature Range:</dt><dd>-29&deg;C to +200&deg;C</dd></div>
@@ -161,15 +491,14 @@
         <h2>Product Overview</h2>
         <i></i>
         <p>
-          Pferd Polymers is a manufacturer and supplier of PTFE lined bends and elbows
-          in various angles, including 90&deg; and 45&deg;. Our products are designed,
-          processed and manufactured with high-quality paste-extruded PTFE liners in
+          Pferd Polymers is a manufacturer and supplier of PTFE / FEP / PFA lined
+          blind flanges in various sizes. These products are manufactured in
           accordance with international standard ASTM F1545.
         </p>
         <p>
-          These lined fittings combine robust carbon steel or stainless steel housings
-          with PTFE or antistatic PTFE liners for dependable corrosion resistance, high
-          purity and long service life in aggressive process applications.
+          Our lined blind flanges combine robust steel construction with
+          high-performance polymer liners for corrosion resistance, high purity
+          and dependable isolation of process pipelines.
         </p>
 
         <h3>Industries Served</h3>
@@ -187,22 +516,23 @@
         <i></i>
         <table>
           <tbody>
-            <tr><th>Size</th><td>20 NB to 300 NB (3/4&quot; to 12&quot;)</td></tr>
-            <tr><th>Length</th><td>As per Standard of B16.5 &amp; ANSI B 16.42</td></tr>
+            <tr><th>Size</th><td>15 NB to 300 NB (1/2&quot; to 12&quot;)</td></tr>
+            <tr><th>Length</th><td>As per standard B16.5 &amp; ANSI B 16.42</td></tr>
             <tr>
               <th>Liner</th>
               <td>
-                PTFE / Antistatic PTFE &mdash; ASTM D1457, D4894 and D4895
+                <strong>PFA</strong> &mdash; Per Fluoro Alkoxy, ASTM D3307<br>
+                <strong>FEP</strong> &mdash; Fluorinated Ethylene Propylene, ASTM D2116<br>
+                <strong>HDPE</strong> &mdash; As per standard
               </td>
             </tr>
             <tr><th>Body</th><td>As per ASTM A 234 Gr. WPB / DI A395 / SS304 / SS316 (Seamless)</td></tr>
-            <tr><th>Steel Housing</th><td>Carbon Steel or Stainless Steel</td></tr>
+            <tr><th>Steel Housing</th><td>Carbon steel or stainless steel</td></tr>
             <tr><th>Flanges</th><td>ASTM A 105 (N) / IS 2062 / ASTM A351 GR CF8 &amp; CF8M</td></tr>
             <tr><th>Drilling / Pressure</th><td>ASA 150# / 300# / DIN / Table F</td></tr>
             <tr>
               <th>Dimensional STD</th>
               <td>
-                Elbow: B16.5 &amp; ANSI B 16.42<br>
                 Flanges: ASME B 16.5<br>
                 Lining Standard: ASTM F 1545
               </td>
@@ -214,57 +544,54 @@
       </article>
     </section>
 
-    <section class="product-data-section product-dimension-section" aria-labelledby="elbow-dimension-heading">
+    <section class="product-data-section product-dimension-section" aria-labelledby="blind-flange-dimension-heading">
       <div class="product-data-inner">
         <header class="product-data-head">
-          <p class="product-data-kicker"><span></span> Dimension Detail</p>
-          <h2 id="elbow-dimension-heading">Elbow / Bend Dimensions</h2>
+          <p class="product-data-kicker"><span></span> Dimension Detail: 150# Class</p>
+          <h2 id="blind-flange-dimension-heading">Blind Flange Dimensions</h2>
           <p class="product-data-note">All dimensions are in mm.</p>
         </header>
-        <div class="product-table-scroll" tabindex="0" role="region" aria-label="Elbow and bend dimension table">
+        <div class="product-table-scroll" tabindex="0" role="region" aria-label="150 class blind flange dimension table">
           <table class="product-data-table product-dimension-table">
             <thead>
               <tr>
                 <th colspan="2" scope="colgroup">NB</th>
-                <th colspan="2" scope="colgroup">Centre Line to Face (L) mm</th>
                 <th rowspan="2" scope="col">d4</th>
                 <th rowspan="2" scope="col">K</th>
                 <th rowspan="2" scope="col">D</th>
-                <th rowspan="2" scope="col">B1</th>
+                <th rowspan="2" scope="col">H</th>
                 <th rowspan="2" scope="col">No. of Holes &amp; Hole Dia</th>
               </tr>
               <tr>
                 <th scope="col">MM</th>
                 <th scope="col">INCH</th>
-                <th scope="col">90 Deg</th>
-                <th scope="col">45 Deg</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>15</td><td>1/2&quot;</td><td>65</td><td>44</td><td>35.1</td><td>60.5</td><td>88.9</td><td>11.1</td><td>4 &times; 15.9</td></tr>
-              <tr><td>20</td><td>3/4&quot;</td><td>75</td><td>44</td><td>42.9</td><td>69.9</td><td>94.4</td><td>12.5</td><td>4 &times; 15.9</td></tr>
-              <tr><td>25</td><td>1&quot;</td><td>89</td><td>44</td><td>50.8</td><td>79.2</td><td>108</td><td>14.5</td><td>4 &times; 15.9</td></tr>
-              <tr><td>40</td><td>1.5&quot;</td><td>102</td><td>57</td><td>73.2</td><td>98.6</td><td>127</td><td>17.5</td><td>4 &times; 15.9</td></tr>
-              <tr><td>50</td><td>2&quot;</td><td>114</td><td>63</td><td>91.9</td><td>120.7</td><td>152.4</td><td>19.5</td><td>4 &times; 19.0</td></tr>
-              <tr><td>65</td><td>2.5&quot;</td><td>127</td><td>76</td><td>104.6</td><td>139.7</td><td>177.8</td><td>22.2</td><td>4 &times; 19.0</td></tr>
-              <tr><td>80</td><td>3&quot;</td><td>140</td><td>76</td><td>127.0</td><td>152.4</td><td>190.5</td><td>24.0</td><td>4 &times; 19.0</td></tr>
-              <tr><td>100</td><td>4&quot;</td><td>165</td><td>102</td><td>157.2</td><td>190.5</td><td>228.6</td><td>24.0</td><td>8 &times; 19.0</td></tr>
-              <tr><td>150</td><td>6&quot;</td><td>203</td><td>127</td><td>215.9</td><td>241.3</td><td>279.5</td><td>25.5</td><td>8 &times; 22.2</td></tr>
-              <tr><td>200</td><td>8&quot;</td><td>229</td><td>140</td><td>269.7</td><td>298.5</td><td>342.9</td><td>29.0</td><td>8 &times; 22.2</td></tr>
-              <tr><td>250</td><td>10&quot;</td><td>279</td><td>165</td><td>323.9</td><td>362.0</td><td>406.4</td><td>30.5</td><td>12 &times; 25.4</td></tr>
-              <tr><td>300</td><td>12&quot;</td><td>305</td><td>190</td><td>381.0</td><td>431.8</td><td>482.6</td><td>32.0</td><td>12 &times; 25.4</td></tr>
+              <tr><td>15</td><td>1/2&quot;</td><td>35.1</td><td>60.5</td><td>88.9</td><td>11.1</td><td>4 &times; 15.9</td></tr>
+              <tr><td>20</td><td>3/4&quot;</td><td>42.9</td><td>69.9</td><td>94.4</td><td>12.5</td><td>4 &times; 15.9</td></tr>
+              <tr><td>25</td><td>1&quot;</td><td>50.8</td><td>79.2</td><td>108</td><td>14.5</td><td>4 &times; 15.9</td></tr>
+              <tr><td>40</td><td>1.5&quot;</td><td>73.2</td><td>98.6</td><td>127</td><td>17.5</td><td>4 &times; 15.9</td></tr>
+              <tr><td>50</td><td>2&quot;</td><td>91.9</td><td>120.7</td><td>152.4</td><td>19.5</td><td>4 &times; 19.0</td></tr>
+              <tr><td>65</td><td>2.5&quot;</td><td>104.6</td><td>139.7</td><td>177.8</td><td>22.2</td><td>4 &times; 19.0</td></tr>
+              <tr><td>80</td><td>3&quot;</td><td>127.0</td><td>152.4</td><td>190.5</td><td>24.0</td><td>4 &times; 19.0</td></tr>
+              <tr><td>100</td><td>4&quot;</td><td>157.2</td><td>190.5</td><td>228.6</td><td>24.0</td><td>8 &times; 19.0</td></tr>
+              <tr><td>150</td><td>6&quot;</td><td>215.9</td><td>241.3</td><td>279.5</td><td>25.5</td><td>8 &times; 22.2</td></tr>
+              <tr><td>200</td><td>8&quot;</td><td>269.7</td><td>298.5</td><td>342.9</td><td>29.0</td><td>8 &times; 22.2</td></tr>
+              <tr><td>250</td><td>10&quot;</td><td>323.9</td><td>362.0</td><td>406.4</td><td>30.5</td><td>12 &times; 25.4</td></tr>
+              <tr><td>300</td><td>12&quot;</td><td>381.0</td><td>431.8</td><td>482.6</td><td>32.0</td><td>12 &times; 25.4</td></tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
 
-    <section class="product-data-section product-testing-section" aria-labelledby="elbow-testing-heading">
+    <section class="product-data-section product-testing-section" aria-labelledby="blind-flange-testing-heading">
       <div class="product-data-inner product-testing-layout">
         <article class="product-testing-card">
           <header class="product-data-head">
             <p class="product-data-kicker"><span></span> Quality Assurance</p>
-            <h2 id="elbow-testing-heading">Testing &amp; Inspection</h2>
+            <h2 id="blind-flange-testing-heading">Testing &amp; Inspection</h2>
           </header>
           <div class="product-table-scroll" tabindex="0" role="region" aria-label="Testing and mechanical properties table">
             <table class="product-data-table product-testing-table">
@@ -306,8 +633,6 @@
             <h2>Notes</h2>
           </header>
           <ol class="product-notes-list">
-            <li>All elbow / bend fittings have SOFF flanges on both sides, with one loose flange and one fixed flange. Both-side loose flanges are available on request. For A105 flanges, a lap joint flange is provided at one end and a fixed flange at the other end.</li>
-            <li>Suitable vent holes are provided for all fittings.</li>
             <li>All fittings work will be supplied with suitable wooden end covers to protect the flare faces.</li>
             <li>Material test certificates will be provided for all raw materials.</li>
             <li>The plastic liner flare will replace the raised face portion of the flange.</li>
@@ -326,7 +651,7 @@
           <figure class="product-drawing-figure">
             <span class="product-drawing-badge">GA Drawing</span>
             <div class="product-drawing-canvas">
-              <img src="../home page product photos/PTFE PRODUCTS/21. Lined elbow - bend/Lined Elbow GA Drawing.jpg" alt="Lined elbow engineering GA drawing with dimensions">
+              <img src="../home page product photos/PTFE PRODUCTS/28. Lined Blind Flange/28. GA DRAWING LINED BLIND FLANGE.jpg" alt="Lined blind flange engineering GA drawing with dimensions">
             </div>
           </figure>
           <div class="product-drawing-panel">
@@ -337,8 +662,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 12h16M12 4v16"/></svg>
                 </span>
                 <div>
-                  <h3>90&deg; / 45&deg; Elbow</h3>
-                  <p>Standard 90&deg; and 45&deg; configurations for reliable process flow changes.</p>
+                  <h3>Pipeline Isolation</h3>
+                  <p>Designed to securely close and isolate the end of a lined piping system.</p>
                 </div>
               </li>
               <li>
@@ -392,6 +717,7 @@
         <div><h3>High Purity</h3><p>Ideal for high-purity and contamination-free process applications.</p></div>
       </article>
     </section>
+    </template>
   </main>
 
   <footer class="site-footer">
@@ -447,7 +773,7 @@
         <ul>
           <li><a href="../product.html">PTFE Lined Pipes</a></li>
           <li><a href="../Lined-fitting.html">Lined Fittings</a></li>
-          <li><a href="Lined elbow.html">Lined Elbow / Bend</a></li>
+          <li><a href="Lined Spacer &amp; PTFE Spacer.html">Lined Spacer &amp; PTFE Spacer</a></li>
           <li><a href="../product.html">PTFE Bellows &amp; Hoses</a></li>
           <li><a href="../product.html">PTFE Sheets &amp; Rods</a></li>
           <li><a href="../product.html">Custom Solutions</a></li>
@@ -520,7 +846,7 @@
           <select name="product">
             <option>Select a product / service</option>
             <option>PTFE Lined Pipes</option>
-            <option selected>Lined Elbow / Bend</option>
+            <option selected>Lined Spacer &amp; PTFE Spacer</option>
             <option>Lined Fittings</option>
             <option>Lined Valves</option>
             <option>PTFE Bellows</option>

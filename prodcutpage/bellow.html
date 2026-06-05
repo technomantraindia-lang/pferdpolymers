@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTFE Bellows | Pferd Polymers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body.bellow-page {
+      background: linear-gradient(180deg, #edf3f9 0%, #f8fafc 48%, #edf3f8 100%);
+    }
+
+    .bellow-page .bellow-shell {
+      overflow: hidden;
+      padding-bottom: 32px;
+    }
+
+    .bellow-page .bellow-breadcrumb,
+    .bellow-page .bellow-hero,
+    .bellow-page .bellow-gallery-section {
+      width: min(1240px, calc(100% - 72px));
+      margin-inline: auto;
+    }
+
+    .bellow-page .bellow-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 24px 0 18px;
+      color: #6a7688;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .bellow-page .bellow-breadcrumb a {
+      color: #536176;
+      text-decoration: none;
+    }
+
+    .bellow-page .bellow-breadcrumb strong {
+      color: #07336d;
+    }
+
+    .bellow-page .bellow-hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+      align-items: center;
+      gap: 52px;
+      min-height: 520px;
+      margin-bottom: 70px;
+      padding: 46px;
+      overflow: hidden;
+      border: 1px solid #d7e1ed;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at 94% 5%, rgba(206, 14, 28, 0.12), transparent 31%),
+        linear-gradient(135deg, #fff 0%, #edf3fa 100%);
+      box-shadow: 0 24px 60px rgba(7, 51, 109, 0.12);
+    }
+
+    .bellow-page .bellow-hero::after {
+      content: "";
+      position: absolute;
+      right: -145px;
+      bottom: -205px;
+      width: 350px;
+      height: 350px;
+      border: 58px solid rgba(7, 51, 109, 0.05);
+      border-radius: 50%;
+    }
+
+    .bellow-page .bellow-visual,
+    .bellow-page .bellow-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .bellow-page .bellow-visual {
+      min-height: 425px;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      border: 1px solid #dbe5f0;
+      border-radius: 20px;
+      background:
+        linear-gradient(rgba(8, 47, 102, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(8, 47, 102, 0.035) 1px, transparent 1px),
+        #fff;
+      background-size: 28px 28px;
+    }
+
+    .bellow-page .bellow-visual img {
+      width: 100%;
+      height: 360px;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 18px rgba(8, 35, 72, 0.18));
+    }
+
+    .bellow-page .bellow-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #07336d;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .bellow-page .bellow-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: #ca0e1c;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .bellow-page .bellow-kicker::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .bellow-page .bellow-copy h1 {
+      margin: 0 0 18px;
+      color: #07336d;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: clamp(58px, 6.5vw, 88px);
+      line-height: 0.9;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+    }
+
+    .bellow-page .bellow-copy h1 span {
+      color: #d20f1e;
+    }
+
+    .bellow-page .bellow-copy > p:not(.bellow-kicker) {
+      max-width: 470px;
+      margin: 0 0 28px;
+      color: #617087;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .bellow-page .bellow-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .bellow-page .bellow-actions a {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .bellow-page .bellow-actions .primary {
+      background: linear-gradient(135deg, #d41120, #a80613);
+      color: #fff;
+      box-shadow: 0 12px 25px rgba(209, 17, 30, 0.24);
+    }
+
+    .bellow-page .bellow-actions .secondary {
+      border: 1px solid #b9c8da;
+      background: #fff;
+      color: #07336d;
+    }
+
+    .bellow-page .bellow-gallery-section {
+      margin-bottom: 70px;
+    }
+
+    .bellow-page .bellow-section-head {
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .bellow-page .bellow-section-head h2 {
+      margin: 0 0 10px;
+      color: #07336d;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: clamp(36px, 4.5vw, 52px);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .bellow-page .bellow-section-head p:last-child {
+      margin: 0;
+      color: #667389;
+      line-height: 1.7;
+    }
+
+    .bellow-page .bellow-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .bellow-page .bellow-card {
+      position: relative;
+      min-width: 0;
+      min-height: 370px;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      overflow: hidden;
+      border: 1px solid #dbe5ef;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 14px 34px rgba(8, 47, 102, 0.09);
+    }
+
+    .bellow-page .bellow-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, transparent 65%, rgba(8, 47, 102, 0.045));
+      pointer-events: none;
+    }
+
+    .bellow-page .bellow-card img {
+      width: 100%;
+      height: 305px;
+      object-fit: contain;
+      transition: transform 0.35s ease;
+    }
+
+    .bellow-page .bellow-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .bellow-page .bellow-card figcaption {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      padding: 8px 13px;
+      border-radius: 8px;
+      background: rgba(7, 51, 109, 0.94);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .bellow-page .bellow-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .bellow-page .bellow-copy {
+        text-align: center;
+      }
+
+      .bellow-page .bellow-copy > p:not(.bellow-kicker) {
+        margin-inline: auto;
+      }
+
+      .bellow-page .bellow-kicker,
+      .bellow-page .bellow-actions {
+        justify-content: center;
+      }
+
+      .bellow-page .bellow-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .bellow-page .bellow-breadcrumb,
+      .bellow-page .bellow-hero,
+      .bellow-page .bellow-gallery-section {
+        width: min(100% - 30px, 1240px);
+      }
+
+      .bellow-page .bellow-hero {
+        gap: 28px;
+        min-height: auto;
+        margin-bottom: 50px;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .bellow-page .bellow-visual {
+        min-height: 310px;
+        padding: 18px;
+      }
+
+      .bellow-page .bellow-visual img {
+        height: 275px;
+      }
+
+      .bellow-page .bellow-copy {
+        padding-bottom: 12px;
+      }
+
+      .bellow-page .bellow-copy h1 {
+        font-size: 52px;
+      }
+
+      .bellow-page .bellow-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .bellow-page .bellow-card {
+        min-height: 320px;
+        padding: 20px;
+      }
+
+      .bellow-page .bellow-card img {
+        height: 270px;
+      }
+    }
+  </style>
+</head>
+<body class="product-detail-page bellow-page">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Pferd Polymers Home">
+      <span class="brand-mark">
+        <span class="mark-p mark-blue">P</span>
+        <span class="mark-p mark-red">P</span>
+        <span class="horse">&#9822;</span>
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name"><strong>PFERD</strong> <em>POLYMERS</em></span>
+        <span class="brand-tagline">Engineering Purity. Ensuring Performance.</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle active" type="button">Products <span class="dropdown-arrow">&#9662;</span></button>
+        <div class="dropdown-menu" aria-label="Products menu">
+          <a class="dropdown-menu-link" href="../product.html">Lined Pipes Systems</a>
+          <div class="dropdown-submenu-group">
+            <a class="dropdown-menu-link" href="../Lined-fitting.html">Lined Fittings</a>
+            <div class="dropdown-submenu">
+              <a href="Lined elbow.html">Lined Elbow</a>
+              <a href="Lined Tee.html">Lined Tee (Equal / Unequal)</a>
+              <a href="Lined Instrument tee.html">Lined Instrument Tee</a>
+              <a href="Lined Lateral tee.html">Lined Lateral Tee</a>
+              <a href="Lined Cross.html">Lined Cross (Equal / Unequal)</a>
+              <a href="Lined Reducer.html">Lined Reducer</a>
+              <a href="Lined Reducing flange.html">Lined Reducing Flange</a>
+              <a href="Lined Blind Flange.html">Lined Blind Flange</a>
+              <a href="../Lined-fitting.html">Lined Full View Sight Glass</a>
+              <a href="Lined Spectacle Blind.html">Lined Spectacle Blind</a>
+              <a href="Lined Spacer &amp; PTFE Spacer.html">Lined Spacer &amp; PTFE Spacer</a>
+            </div>
+          </div>
+          <div class="dropdown-submenu-group">
+            <a class="dropdown-menu-link" href="../product.html">Lined Flow Meter</a>
+            <div class="dropdown-submenu">
+              <a href="../product.html">PTFE Lining in Flow Meter</a>
+            </div>
+          </div>
+          <div class="dropdown-submenu-group">
+            <a class="dropdown-menu-link" href="../product.html">PTFE Products</a>
+            <div class="dropdown-submenu">
+              <a href="bellow.html">PTFE BELLOWS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="../Industries.html">Industries</a>
+      <a href="../quality.html">Quality</a>
+      <a href="../contact.html">Contact Us</a>
+    </nav>
+
+    <a class="quote-btn" href="../contact.html">Inquiry <span>&rarr;</span></a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="mobile-menu-overlay" data-menu-close></div>
+    <aside class="mobile-sidebar" aria-label="Mobile navigation">
+      <div class="mobile-sidebar-head">
+        <strong>Pferd Polymers</strong>
+        <button type="button" aria-label="Close menu" data-menu-close>&times;</button>
+      </div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Us</a>
+        <button class="mobile-submenu-toggle" type="button" aria-expanded="false">Products <span>&#9662;</span></button>
+        <div class="mobile-submenu">
+          <a href="../product.html">Lined Pipes Systems</a>
+          <a href="../Lined-fitting.html">Lined Fittings</a>
+          <a href="Lined elbow.html">Lined Elbow</a>
+          <a href="Lined Tee.html">Lined Tee (Equal / Unequal)</a>
+          <a href="Lined Instrument tee.html">Lined Instrument Tee</a>
+          <a href="Lined Lateral tee.html">Lined Lateral Tee</a>
+          <a href="Lined Cross.html">Lined Cross (Equal / Unequal)</a>
+          <a href="Lined Reducer.html">Lined Reducer</a>
+          <a href="Lined Reducing flange.html">Lined Reducing Flange</a>
+          <a href="Lined Blind Flange.html">Lined Blind Flange</a>
+          <a href="../Lined-fitting.html">Lined Full View Sight Glass</a>
+          <a href="Lined Spectacle Blind.html">Lined Spectacle Blind</a>
+          <a href="Lined Spacer &amp; PTFE Spacer.html">Lined Spacer &amp; PTFE Spacer</a>
+          <a href="../product.html">Lined Flow Meter</a>
+          <a href="../product.html">PTFE Lining in Flow Meter</a>
+          <a href="../product.html">PTFE Products</a>
+          <a href="bellow.html">PTFE BELLOWS</a>
+        </div>
+        <a href="../Industries.html">Industries</a>
+        <a href="../quality.html">Quality</a>
+        <a href="../contact.html">Contact Us</a>
+      </nav>
+      <a class="mobile-sidebar-quote" href="../contact.html">Inquiry</a>
+    </aside>
+  </header>
+
+  <main class="bellow-shell">
+    <nav class="bellow-breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>&rsaquo;</span>
+      <a href="../product.html">Products</a>
+      <span>&rsaquo;</span>
+      <strong>PTFE Bellows</strong>
+    </nav>
+
+    <section class="bellow-hero" aria-labelledby="bellow-title">
+      <div class="bellow-visual">
+        <span class="bellow-badge">Product Image</span>
+        <img src="../home page product photos/LINED PRODUCTS/BELLOW/PTFE BELLOW WITH SS304 FLANGE.jpg" alt="PTFE bellow with stainless steel flange">
+      </div>
+      <div class="bellow-copy">
+        <p class="bellow-kicker">PTFE Products</p>
+        <h1 id="bellow-title">PTFE <span>Bellows</span></h1>
+        <p>Explore available PTFE bellow product views and configurations.</p>
+        <div class="bellow-actions">
+          <a class="primary" href="../contact.html">Inquiry &rarr;</a>
+          <a class="secondary" href="../index.html">Back to Products</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bellow-gallery-section" aria-labelledby="bellow-gallery-title">
+      <header class="bellow-section-head">
+        <p class="bellow-kicker">Image Gallery</p>
+        <h2 id="bellow-gallery-title">Product Images</h2>
+        <p>Available product photographs shown without added technical specifications.</p>
+      </header>
+
+      <div class="bellow-gallery">
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/PTFE BELLOW MAKE PFERD POLYMERS.jpeg" alt="PTFE bellow by Pferd Polymers" loading="lazy">
+          <figcaption>PTFE Bellow</figcaption>
+        </figure>
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/PTFE BELLOW WITH SS304 FLANGE.jpg" alt="PTFE bellow with SS304 flange" loading="lazy">
+          <figcaption>SS304 Flange View</figcaption>
+        </figure>
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.03.57.jpeg" alt="PTFE bellow product view 1" loading="lazy">
+          <figcaption>Product View 01</figcaption>
+        </figure>
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.03.58 (1).jpeg" alt="PTFE bellow product view 2" loading="lazy">
+          <figcaption>Product View 02</figcaption>
+        </figure>
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.03.58.jpeg" alt="PTFE bellow product view 3" loading="lazy">
+          <figcaption>Product View 03</figcaption>
+        </figure>
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.03.59.jpeg" alt="PTFE bellow product view 4" loading="lazy">
+          <figcaption>Product View 04</figcaption>
+        </figure>
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.04.00 (1).jpeg" alt="PTFE bellow product view 5" loading="lazy">
+          <figcaption>Product View 05</figcaption>
+        </figure>
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.04.00 (2).jpeg" alt="PTFE bellow product view 6" loading="lazy">
+          <figcaption>Product View 06</figcaption>
+        </figure>
+        <figure class="bellow-card">
+          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.04.01.jpeg" alt="PTFE bellow product view 7" loading="lazy">
+          <figcaption>Product View 07</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-cta">
+      <div>
+        <h2>Get Reliable Piping Solutions for Your Business</h2>
+        <p>Quality products. Expert support. Long-term performance you can rely on.</p>
+      </div>
+      <a href="../contact.html">Request a Quote</a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-col footer-brand">
+        <a class="footer-logo" href="../index.html" aria-label="Pferd Polymers Home">
+          <span class="footer-logo-mark"><span></span><span></span><span></span></span>
+          <span class="footer-logo-copy"><strong>Pferd</strong><em>POLYMERS</em></span>
+        </a>
+        <p>Pferd Polymers delivers PTFE, PFA and FEP lined products for process industries.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer quick links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../product.html">Products</a></li>
+          <li><a href="../Industries.html">Industries</a></li>
+          <li><a href="../quality.html">Quality</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul>
+          <li><a href="../product.html">PTFE Lined Pipes</a></li>
+          <li><a href="../Lined-fitting.html">Lined Fittings</a></li>
+          <li><a href="bellow.html">PTFE Bellows</a></li>
+          <li><a href="../product.html">PTFE Sheets &amp; Rods</a></li>
+          <li><a href="../contact.html">Custom Solutions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h3>Contact Information</h3>
+        <article><span>&#9742;</span><p>+91 98765 43210</p></article>
+        <article><span>&#9993;</span><p>info@pferdpolymers.com</p></article>
+        <article><span>&#9711;</span><p>www.pferdpolymers.com</p></article>
+        <article><span>&#9906;</span><p>Plot No. X, Industrial Area, Ankleshwar, Gujarat - 393002, India</p></article>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Technomantra India. All Rights Reserved.</p>
+      <div><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
