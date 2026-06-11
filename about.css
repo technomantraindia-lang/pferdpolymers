@@ -762,22 +762,36 @@
   background: var(--about-red);
 }
 
-.about-proof-card:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  right: 28px;
-  bottom: 30px;
-  width: 48%;
-  height: 52%;
-  opacity: 0.45;
-  background:
-    radial-gradient(circle at 15% 56%, var(--about-red) 0 5px, transparent 6px),
-    radial-gradient(circle at 48% 42%, var(--about-red) 0 5px, transparent 6px),
-    radial-gradient(circle at 74% 34%, var(--about-red) 0 5px, transparent 6px),
-    radial-gradient(circle at 88% 76%, var(--about-red) 0 5px, transparent 6px),
-    url("contact-bananr.png") center / cover no-repeat;
-  filter: grayscale(1);
-  clip-path: polygon(4% 44%, 22% 18%, 40% 42%, 62% 12%, 76% 28%, 96% 18%, 86% 54%, 66% 48%, 48% 72%, 30% 58%, 16% 76%);
+.about-proof-global {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.88fr) minmax(260px, 1.12fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.about-global-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.about-global-map {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 240px;
+}
+
+.about-global-map img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  max-height: 300px;
+  object-fit: contain;
+  object-position: center right;
+  border-radius: 12px;
+  border: 1px solid rgba(6, 45, 103, 0.1);
+  box-shadow: 0 12px 28px rgba(6, 45, 103, 0.1);
 }
 
 @media (max-width: 1200px) {
@@ -961,8 +975,19 @@
     padding: 28px 20px;
   }
 
-  .about-proof-card:nth-child(2)::before {
-    display: none;
+  .about-proof-global {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-global-map {
+    justify-content: center;
+    min-height: 200px;
+  }
+
+  .about-global-map img {
+    max-width: 100%;
+    object-position: center;
   }
 }
 
