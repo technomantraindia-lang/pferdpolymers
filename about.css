@@ -774,6 +774,12 @@
   z-index: 1;
 }
 
+.about-proof-global h2 {
+  white-space: nowrap;
+  font-size: clamp(36px, 2.8vw, 44px);
+  line-height: 1.08;
+}
+
 .about-global-map {
   margin: 0;
   display: flex;
@@ -978,6 +984,11 @@
   .about-proof-global {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .about-proof-global h2 {
+    white-space: normal;
+    font-size: 38px;
   }
 
   .about-global-map {
