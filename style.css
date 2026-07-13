@@ -13895,6 +13895,14 @@ canvas {
     content: "FEP";
   }
 
+  .product-detail-page .product-testing-spec-table tbody th:nth-child(1)::before {
+    content: "Specification";
+  }
+
+  .product-detail-page .product-testing-spec-table tbody td:nth-child(2)::before {
+    content: "Requirement";
+  }
+
   .product-detail-page .product-notes-list {
     width: 100% !important;
     min-width: 0 !important;
