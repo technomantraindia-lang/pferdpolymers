@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lined Fittings | Pferd Polymers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .lined-fitting-page .lf-product-area {
+      max-width: none;
+      padding: 58px max(28px, calc((100vw - 1240px) / 2)) 82px;
+      background:
+        radial-gradient(circle at 6% 8%, rgba(6, 45, 103, 0.055), transparent 26%),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+    }
+
+    .lined-fitting-page .lf-products {
+      width: min(1240px, 100%);
+      margin: 0 auto;
+    }
+
+    .lined-fitting-page .lf-section-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px 30px;
+      align-items: end;
+      margin-bottom: 32px;
+    }
+
+    .lined-fitting-page .lf-section-head h2 {
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: clamp(36px, 4vw, 52px);
+      text-transform: uppercase;
+    }
+
+    .lined-fitting-page .lf-section-head i {
+      grid-column: 1;
+      margin: 14px 0 0;
+    }
+
+    .lined-fitting-page .lf-section-head p {
+      grid-column: 1;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    .lined-fitting-page .lf-product-count {
+      grid-column: 2;
+      grid-row: 1 / span 3;
+      align-self: center;
+      padding: 10px 16px;
+      border: 1px solid #cdd9e8;
+      border-radius: 999px;
+      background: #fff;
+      color: #062d67;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 22px rgba(6, 45, 103, 0.08);
+    }
+
+    .lined-fitting-page .lf-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .lined-fitting-page .lf-card {
+      min-height: 0;
+      padding: 0;
+      align-items: stretch;
+      border: 1px solid #dbe5f0;
+      border-radius: 16px;
+      text-align: left;
+      box-shadow: 0 16px 38px rgba(7, 38, 82, 0.09);
+    }
+
+    .lined-fitting-page .lf-card::before {
+      z-index: 3;
+      height: 5px;
+      opacity: 1;
+      background: linear-gradient(90deg, #062d67 0 68%, #d1111e 68% 100%);
+    }
+
+    .lined-fitting-page .lf-card-media {
+      position: relative;
+      display: grid;
+      place-items: center;
+      height: 235px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(6, 45, 103, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 45, 103, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, #f8fbff, #eef4fa);
+      background-size: 26px 26px, 26px 26px, auto;
+    }
+
+    .lined-fitting-page .lf-card-media img {
+      width: calc(100% - 48px);
+      height: 190px;
+      margin: 0;
+      padding: 8px;
+      border-radius: 0;
+      background: transparent;
+      object-fit: contain;
+      filter: drop-shadow(0 14px 14px rgba(8, 38, 75, 0.14));
+      transition: transform 220ms ease;
+    }
+
+    .lined-fitting-page .lf-card:hover .lf-card-media img {
+      transform: scale(1.045);
+    }
+
+    .lined-fitting-page .lf-card-index {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #062d67;
+      color: #fff;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(6, 45, 103, 0.18);
+    }
+
+    .lined-fitting-page .lf-card-body {
+      display: flex;
+      min-height: 176px;
+      flex: 1;
+      flex-direction: column;
+      padding: 24px 24px 22px;
+    }
+
+    .lined-fitting-page .lf-card-type {
+      min-height: 0;
+      margin: 0 0 8px;
+      color: #d1111e;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .lined-fitting-page .lf-card h3 {
+      min-height: 0;
+      justify-content: flex-start;
+      color: #082f66;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: 23px;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .lined-fitting-page .lf-card-body > p:not(.lf-card-type) {
+      min-height: 0;
+      margin: 10px 0 0;
+      color: #5e6b7d;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .lined-fitting-page .lf-card-body > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      width: fit-content;
+      margin-top: auto;
+      padding-top: 20px;
+      color: #d1111e;
+      text-decoration: none;
+    }
+
+    .lined-fitting-page .lf-card-body > a span {
+      transition: transform 180ms ease;
+    }
+
+    .lined-fitting-page .lf-card:hover .lf-card-body > a span {
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 980px) {
+      .lined-fitting-page .lf-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .lined-fitting-page .lf-product-area {
+        padding: 42px 18px 58px;
+      }
+
+      .lined-fitting-page .lf-section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .lined-fitting-page .lf-product-count {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: start;
+      }
+
+      .lined-fitting-page .lf-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lined-fitting-page .lf-card-media {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body class="product-detail-page lined-fitting-page">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Pferd Polymers Home">
+      <span class="brand-mark">
+        <span class="mark-p mark-blue">P</span>
+        <span class="mark-p mark-red">P</span>
+        <span class="horse">&#9822;</span>
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name"><strong>PFERD</strong> <em>POLYMERS</em></span>
+        <span class="brand-tagline">Engineering Purity. Ensuring Performance.</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../pages/about.html">About Us</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle active" type="button">Products <span class="dropdown-arrow">&#9662;</span></button>
+        <div class="dropdown-menu" aria-label="Products menu">
+          <a class="dropdown-menu-link" href="../category/product.html">Lined Pipes Systems</a>
+          <div class="dropdown-submenu-group">
+            <a class="dropdown-menu-link" href="../category/Lined-fitting.html">Lined Fittings</a>
+            <div class="dropdown-submenu">
+              <a href="../prodcutpage/Lined elbow.html">Lined Elbow</a>
+              <a href="../prodcutpage/Lined Tee.html">Lined Tee (Equal / Unequal)</a>
+              <a href="../prodcutpage/Lined Instrument tee.html">Lined Instrument Tee</a>
+              <a href="../prodcutpage/Lined Lateral tee.html">Lined Lateral Tee</a>
+              <a href="../prodcutpage/Lined Cross.html">Lined Cross (Equal / Unequal)</a>
+              <a href="../prodcutpage/Lined Reducer.html">Lined Reducer</a>
+              <a href="../prodcutpage/Lined Reducing flange.html">Lined Reducing Flange</a>
+              <a href="../prodcutpage/Lined Blind Flange.html">Lined Blind Flange</a>
+              <a href="../category/Lined-fitting.html">Lined Full View Sight Glass</a>
+              <a href="../prodcutpage/Lined Spectacle Blind.html">Lined Spectacle Blind</a>
+              <a href="../prodcutpage/Lined Spacer &amp; PTFE Spacer.html">Lined Spacer &amp; PTFE Spacer</a>
+            </div>
+          </div>
+          <div class="dropdown-submenu-group">
+            <a class="dropdown-menu-link" href="../category/product.html">Lined Flow Meter</a>
+            <div class="dropdown-submenu">
+              <a href="../category/product.html">PTFE Lining in Flow Meter</a>
+            </div>
+          </div>
+          <div class="dropdown-submenu-group">
+            <a class="dropdown-menu-link" href="../category/PTFE-products.html">PTFE Products</a>
+            <div class="dropdown-submenu">
+              <a href="../prodcutpage/bellow.html">PTFE BELLOWS</a>
+                <a href="../prodcutpage/rod.html">PTFE RODS</a>
+                <a href="../prodcutpage/sheet.html">PTFE SHEETS</a>
+                <a href="../prodcutpage/bush.html">PTFE BUSH</a>
+                <a href="../prodcutpage/tube.html">PTFE TUBES</a>
+                <a href="../prodcutpage/ptfe-gasket-washer.html">PTFE GASKET / WASHER</a>
+              <a href="../prodcutpage/other-products.html">OTHER PTFE PRODUCTS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="../pages/Industries.html">Industries</a>
+      <a href="../pages/quality.html">Quality</a>
+      <a href="../pages/contact.html">Contact Us</a>
+    </nav>
+
+    <a class="quote-btn inquiry-trigger" href="#inquiry-modal">Inquiry <span>&rarr;</span></a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="mobile-menu-overlay" data-menu-close></div>
+    <aside class="mobile-sidebar" aria-label="Mobile navigation">
+      <div class="mobile-sidebar-head">
+        <strong>Pferd Polymers</strong>
+        <button type="button" aria-label="Close menu" data-menu-close>&times;</button>
+      </div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../pages/about.html">About Us</a>
+        <button class="mobile-submenu-toggle" type="button" aria-expanded="false">Products <span>&#9662;</span></button>
+        <div class="mobile-submenu">
+          <a href="../category/product.html">Lined Pipes Systems</a>
+          <a href="../category/Lined-fitting.html">Lined Fittings</a>
+          <a href="../prodcutpage/Lined elbow.html">Lined Elbow</a>
+          <a href="../prodcutpage/Lined Tee.html">Lined Tee (Equal / Unequal)</a>
+          <a href="../prodcutpage/Lined Instrument tee.html">Lined Instrument Tee</a>
+          <a href="../prodcutpage/Lined Lateral tee.html">Lined Lateral Tee</a>
+          <a href="../prodcutpage/Lined Cross.html">Lined Cross (Equal / Unequal)</a>
+          <a href="../prodcutpage/Lined Reducer.html">Lined Reducer</a>
+          <a href="../prodcutpage/Lined Reducing flange.html">Lined Reducing Flange</a>
+          <a href="../prodcutpage/Lined Blind Flange.html">Lined Blind Flange</a>
+          <a href="../category/Lined-fitting.html">Lined Full View Sight Glass</a>
+          <a href="../prodcutpage/Lined Spectacle Blind.html">Lined Spectacle Blind</a>
+          <a href="../prodcutpage/Lined Spacer &amp; PTFE Spacer.html">Lined Spacer &amp; PTFE Spacer</a>
+          <a href="../category/product.html">Lined Flow Meter</a>
+          <a href="../category/product.html">PTFE Lining in Flow Meter</a>
+          <a href="../category/PTFE-products.html">PTFE Products</a>
+          <a href="../prodcutpage/bellow.html">PTFE BELLOWS</a>
+                <a href="../prodcutpage/rod.html">PTFE RODS</a>
+                <a href="../prodcutpage/sheet.html">PTFE SHEETS</a>
+                <a href="../prodcutpage/bush.html">PTFE BUSH</a>
+                <a href="../prodcutpage/tube.html">PTFE TUBES</a>
+                <a href="../prodcutpage/ptfe-gasket-washer.html">PTFE GASKET / WASHER</a>
+              <a href="../prodcutpage/other-products.html">OTHER PTFE PRODUCTS</a>
+        </div>
+        <a href="../pages/Industries.html">Industries</a>
+        <a href="../pages/quality.html">Quality</a>
+        <a href="../pages/contact.html">Contact Us</a>
+      </nav>
+      <a class="mobile-sidebar-quote inquiry-trigger" href="#inquiry-modal">Inquiry</a>
+    </aside>
+  </header>
+
+  <main>
+    <section class="lf-hero">
+      <div class="lf-hero-copy">
+        <p>Premium Quality</p>
+        <h1><span class="lf-hero-line">Lined Fittings</span><span class="lf-hero-line">Systems</span></h1>
+        <i></i>
+        <span>
+          Pferd Polymers is a fastest growing manufacturer of high-performance fluoropolymer lined products,
+          engineered for superior corrosion resistance, reliability and long service life in critical industrial
+          applications.
+        </span>
+        <ul aria-label="Product advantages">
+          <li><b>&#128737;</b> Corrosion<br>Resistance</li>
+          <li><b>&#8451;</b> High Temp.<br>Performance</li>
+          <li><b>&#9879;</b> Chemical<br>Compatibility</li>
+          <li><b>&#8635;</b> Long Service<br>Life</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="lf-breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>&rsaquo;</span>
+      <a href="../index.html#products">Products</a>
+      <span>&rsaquo;</span>
+      <strong>Lined Fittings</strong>
+    </section>
+
+    <section class="lf-product-area">
+      <div class="lf-products">
+        <div class="lf-section-head">
+          <h2>Explore Lined Fittings</h2>
+          <i></i>
+          <p>We offer a complete range of lined fittings designed for reliable performance in aggressive chemical services.</p>
+          <span class="lf-product-count">10 Products</span>
+        </div>
+
+        <div class="lf-grid">
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined elbow.html">
+              <img src="../home page product photos/PTFE PRODUCTS/21. Lined elbow - bend/2.PTFE LINED ELBOW.jpg" alt="PTFE lined elbow and bend">
+              <span class="lf-card-index">01</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Elbow / Bend</h3>
+              <p>90&deg; and 45&deg; configurations</p>
+              <a href="../prodcutpage/Lined elbow.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Tee.html">
+              <img src="../home page product photos/PTFE PRODUCTS/22. Lined Tee/2. PTTFE LINED EQUAL TEE.jpg" alt="PTFE lined equal tee">
+              <span class="lf-card-index">02</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Tee</h3>
+              <p>Equal and unequal configurations</p>
+              <a href="../prodcutpage/Lined Tee.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Instrument tee.html">
+              <img src="../home page product photos/PTFE PRODUCTS/23. Lined Instrument tee/23. PFA LINED INSTRUMENT TEE.jpg" alt="PFA lined instrument tee">
+              <span class="lf-card-index">03</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Instrument Tee</h3>
+              <p>Instrument branch connection</p>
+              <a href="../prodcutpage/Lined Instrument tee.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Lateral tee.html">
+              <img src="../home page product photos/PTFE PRODUCTS/24. Lined Lateral tee/24. Lined Lateral Tee.jpg" alt="PTFE lined lateral tee">
+              <span class="lf-card-index">04</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Lateral Tee</h3>
+              <p>Angled branch connection</p>
+              <a href="../prodcutpage/Lined Lateral tee.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Cross.html">
+              <img src="../home page product photos/PTFE PRODUCTS/25. Lined Cross/25. Lined Cross.jpg" alt="PTFE lined cross">
+              <span class="lf-card-index">05</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Cross</h3>
+              <p>Equal and unequal configurations</p>
+              <a href="../prodcutpage/Lined Cross.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Reducer.html">
+              <img src="../home page product photos/PTFE PRODUCTS/26. Lined Reducer/26. Lined Redcer.jpg" alt="PTFE lined reducer">
+              <span class="lf-card-index">06</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Reducer</h3>
+              <p>Concentric and eccentric types</p>
+              <a href="../prodcutpage/Lined Reducer.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Reducing flange.html">
+              <img src="../home page product photos/PTFE PRODUCTS/27. Lined Reducing flange/PTFE LINED REDUCING FLANGE.jpg" alt="PTFE lined reducing flange">
+              <span class="lf-card-index">07</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Reducing Flange</h3>
+              <p>Compact size transition</p>
+              <a href="../prodcutpage/Lined Reducing flange.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Blind Flange.html">
+              <img src="../home page product photos/PTFE PRODUCTS/28. Lined Blind Flange/28. PTFE LINED BLIND FLANGE.jpg" alt="PTFE lined blind flange">
+              <span class="lf-card-index">08</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Blind Flange</h3>
+              <p>Lined pipeline closure</p>
+              <a href="../prodcutpage/Lined Blind Flange.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Spectacle Blind.html">
+              <img src="../home page product photos/PTFE PRODUCTS/29. Lined Spectacle Blind/29. PTFE LINED SPECTACLE BLIND.jpg" alt="PTFE lined spectacle blind">
+              <span class="lf-card-index">09</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Spectacle Blind</h3>
+              <p>Product and GA drawing</p>
+              <a href="../prodcutpage/Lined Spectacle Blind.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="lf-card">
+            <a class="lf-card-media" href="../prodcutpage/Lined Spacer &amp; PTFE Spacer.html">
+              <img src="../home page product photos/PTFE PRODUCTS/210. Lined Spacer &amp; PTFE Spacer/Solid Spacer for Lined Pipes.jpg" alt="Lined spacer and PTFE spacer">
+              <span class="lf-card-index">10</span>
+            </a>
+            <div class="lf-card-body">
+              <p class="lf-card-type">Lined Fitting</p>
+              <h3>Lined Spacer &amp; PTFE Spacer</h3>
+              <p>Lined and solid spacer options</p>
+              <a href="../prodcutpage/Lined Spacer &amp; PTFE Spacer.html">View Details <span>&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lf-industries">
+      <p><span></span> Built For Performance <span></span></p>
+      <h2>Trusted Across Industries</h2>
+      <div>
+        <article><span>&#9879;</span><strong>Chemical<br>Processing</strong></article>
+        <article><span>&#9962;</span><strong>Petrochemical</strong></article>
+        <article><span>&#9671;</span><strong>Pharmaceutical</strong></article>
+        <article><span>&#128167;</span><strong>Water Treatment</strong></article>
+        <article><span>&#9889;</span><strong>Power Generation</strong></article>
+        <article><span>&#9874;</span><strong>Mining &amp;<br>Minerals</strong></article>
+        <article><span>&#9963;</span><strong>Pulp &amp; Paper</strong></article>
+      </div>
+    </section>
+
+    <section class="lf-info-band">
+      <article>
+        <h2>Lining Materials</h2>
+        <i></i>
+        <p>High quality lining materials for maximum performance</p>
+        <ul>
+          <li>PTFE (Polytetrafluoroethylene)</li>
+          <li>PFA (Perfluoroalkoxy)</li>
+          <li>FEP (Fluorinated Ethylene Propylene)</li>
+          <li>PVDF (Polyvinylidene Fluoride)</li>
+        </ul>
+      </article>
+      <figure>
+        <img src="../home page product photos/LINED PRODUCTS/Lined Fittings.png" alt="PTFE lined fitting materials">
+      </figure>
+      <article>
+        <h2>Applications</h2>
+        <i></i>
+        <p>Ideal for handling a wide range of corrosive media</p>
+        <ul>
+          <li>Acids &amp; Alkalis</li>
+          <li>Solvents</li>
+          <li>Slurries</li>
+          <li>High Purity Chemicals</li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-cta">
+      <div>
+        <h2>Get Reliable Piping Solutions for Your Business</h2>
+        <p>Quality products. Expert support. Long-term performance you can rely on.</p>
+      </div>
+      <a class="inquiry-trigger" href="#inquiry-modal">Request a Quote</a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-col footer-brand">
+        <a class="footer-logo" href="../index.html" aria-label="Pferd Polymers Home">
+          <span class="footer-logo-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="footer-logo-copy">
+            <strong>Pferd</strong>
+            <em>POLYMERS</em>
+          </span>
+        </a>
+        <p>
+          Pferd Polymers is a trusted manufacturer of PTFE, PFA, and FEP lined
+          pipes, fittings, and valves delivering high-performance solutions for
+          process industries worldwide.
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">&#9675;</a>
+          <a href="#" aria-label="YouTube">&#9658;</a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer quick links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/about.html">About Us</a></li>
+          <li><a href="../category/product.html">Products</a></li>
+          <li><a href="../pages/Industries.html">Industries</a></li>
+          <li><a href="../pages/quality.html">Quality</a></li>
+          <li><a href="../pages/quality.html#documents">Certifications</a></li>
+          <li><a href="../pages/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul>
+          <li><a href="../category/product.html">LINED PIPES SYSTEMS</a></li>
+          <li><a href="../category/Lined-fitting.html">LINED FITTINGS</a></li>
+          <li><a href="../category/product.html">LINED FLOW METER</a></li>
+          <li><a href="../category/PTFE-products.html">PTFE Products</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h3>Contact Information</h3>
+        <article>
+          <span>&#9742;</span>
+          <p>+91 98765 43210</p>
+        </article>
+        <article>
+          <span>&#9993;</span>
+          <p>info@pferdpolymers.com</p>
+        </article>
+        <article>
+          <span>&#9711;</span>
+          <p>www.pferdpolymers.com</p>
+        </article>
+        <article>
+          <span>&#9906;</span>
+          <p>Plot No. X, Industrial Area, Ankleshwar, Gujarat - 393002, India</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Technomantra India. All Rights Reserved.</p>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="inquiry-modal" id="inquiry-modal" hidden>
+    <div class="inquiry-backdrop" data-inquiry-close></div>
+    <div class="inquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="inquiry-title">
+      <button class="inquiry-close" type="button" aria-label="Close inquiry form" data-inquiry-close>&times;</button>
+      <h2 id="inquiry-title">Inquiry Form</h2>
+
+      <div class="inquiry-head">
+        <span>&#9874;</span>
+        <div>
+          <h3>Request Technical Support</h3>
+          <p>Tell us what you need. We will respond shortly.</p>
+        </div>
+      </div>
+
+      <form class="inquiry-form" action="#" method="post">
+        <label>
+          <strong>Full Name <em>*</em></strong>
+          <input type="text" name="name" placeholder="Enter your full name">
+        </label>
+        <label>
+          <strong>Company Name <em>*</em></strong>
+          <input type="text" name="company" placeholder="Enter your company name">
+        </label>
+        <label>
+          <strong>Email Address <em>*</em></strong>
+          <input type="email" name="email" placeholder="Enter your email address">
+        </label>
+        <label>
+          <strong>Phone Number <em>*</em></strong>
+          <input type="tel" name="phone" placeholder="Enter your phone number">
+        </label>
+        <label class="wide">
+          <strong>Product Requirement <em>*</em></strong>
+          <select name="product">
+            <option>Select a product / service</option>
+            <option>PTFE Lined Pipes</option>
+            <option>Lined Fittings</option>
+            <option>Lined Valves</option>
+            <option>PTFE Bellows</option>
+            <option>Custom Engineered Solution</option>
+          </select>
+        </label>
+        <label class="wide">
+          <strong>Project Details <em>*</em></strong>
+          <textarea name="message" placeholder="Describe your requirement in detail..."></textarea>
+        </label>
+        <button type="submit">Send Inquiry <span>&rarr;</span></button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

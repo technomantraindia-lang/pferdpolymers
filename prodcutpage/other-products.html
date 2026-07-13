@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PTFE Bellows | Pferd Polymers</title>
+  <title>Other PTFE Products | Pferd Polymers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -263,6 +263,86 @@
       font-weight: 800;
     }
 
+    .bellow-page .other-visual-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .bellow-page .other-visual-grid img {
+      width: 100%;
+      height: 170px;
+      padding: 14px;
+      border: 1px solid #dbe5ef;
+      border-radius: 14px;
+      background: #fff;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 14px rgba(8, 35, 72, 0.13));
+    }
+
+    .bellow-page .other-products-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bellow-page .other-product-card {
+      min-height: 0;
+      display: block;
+      padding: 0;
+    }
+
+    .bellow-page .other-product-card::before {
+      display: none;
+    }
+
+    .bellow-page .other-card-head {
+      padding: 22px 22px 0;
+    }
+
+    .bellow-page .other-card-head p {
+      margin: 0 0 8px;
+      color: #ca0e1c;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .bellow-page .other-card-head h3 {
+      margin: 0;
+      color: #07336d;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: 32px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .bellow-page .other-image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 22px;
+    }
+
+    .bellow-page .other-image-grid img {
+      width: 100%;
+      height: 190px;
+      padding: 12px;
+      border: 1px solid #e1e8f1;
+      border-radius: 12px;
+      background: #f8fafc;
+      object-fit: contain;
+      transition: transform 0.35s ease, background 0.35s ease;
+    }
+
+    .bellow-page .other-product-card:hover .other-image-grid img {
+      background: #fff;
+    }
+
+    .bellow-page .other-image-grid img:hover {
+      transform: scale(1.04);
+    }
+
     @media (max-width: 980px) {
       .bellow-page .bellow-hero {
         grid-template-columns: 1fr;
@@ -283,6 +363,10 @@
 
       .bellow-page .bellow-gallery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .bellow-page .other-products-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -329,6 +413,15 @@
 
       .bellow-page .bellow-card img {
         height: 270px;
+      }
+
+      .bellow-page .other-visual-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bellow-page .other-visual-grid img,
+      .bellow-page .other-image-grid img {
+        height: 165px;
       }
     }
   </style>
@@ -380,11 +473,11 @@
             <a class="dropdown-menu-link" href="../category/PTFE-products.html">PTFE Products</a>
             <div class="dropdown-submenu">
               <a href="bellow.html">PTFE BELLOWS</a>
-                <a href="rod.html">PTFE RODS</a>
-                <a href="sheet.html">PTFE SHEETS</a>
-                <a href="bush.html">PTFE BUSH</a>
-                <a href="tube.html">PTFE TUBES</a>
-                <a href="ptfe-gasket-washer.html">PTFE GASKET / WASHER</a>
+              <a href="rod.html">PTFE RODS</a>
+              <a href="sheet.html">PTFE SHEETS</a>
+              <a href="bush.html">PTFE BUSH</a>
+              <a href="tube.html">PTFE TUBES</a>
+              <a href="ptfe-gasket-washer.html">PTFE GASKET / WASHER</a>
               <a href="other-products.html">OTHER PTFE PRODUCTS</a>
             </div>
           </div>
@@ -428,12 +521,12 @@
           <a href="../category/product.html">PTFE Lining in Flow Meter</a>
           <a href="../category/PTFE-products.html">PTFE Products</a>
           <a href="bellow.html">PTFE BELLOWS</a>
-                <a href="rod.html">PTFE RODS</a>
-                <a href="sheet.html">PTFE SHEETS</a>
-                <a href="bush.html">PTFE BUSH</a>
-                <a href="tube.html">PTFE TUBES</a>
-                <a href="ptfe-gasket-washer.html">PTFE GASKET / WASHER</a>
-              <a href="other-products.html">OTHER PTFE PRODUCTS</a>
+          <a href="rod.html">PTFE RODS</a>
+          <a href="sheet.html">PTFE SHEETS</a>
+          <a href="bush.html">PTFE BUSH</a>
+          <a href="tube.html">PTFE TUBES</a>
+          <a href="ptfe-gasket-washer.html">PTFE GASKET / WASHER</a>
+          <a href="other-products.html">OTHER PTFE PRODUCTS</a>
         </div>
         <a href="../pages/Industries.html">Industries</a>
         <a href="../pages/quality.html">Quality</a>
@@ -449,69 +542,89 @@
       <span>&rsaquo;</span>
       <a href="../category/product.html">Products</a>
       <span>&rsaquo;</span>
-      <strong>PTFE Bellows</strong>
+      <strong>Other PTFE Products</strong>
     </nav>
 
-    <section class="bellow-hero" aria-labelledby="bellow-title">
+    <section class="bellow-hero" aria-labelledby="other-products-title">
       <div class="bellow-visual">
-        <span class="bellow-badge">Product Image</span>
-        <img src="../home page product photos/LINED PRODUCTS/BELLOW/PTFE BELLOW WITH SS304 FLANGE.jpg" alt="PTFE bellow with stainless steel flange">
+        <span class="bellow-badge">Multiple Products</span>
+        <div class="other-visual-grid">
+          <img src="../home page product photos/other products/Expanded PTFE Joint Sealant Tape (1).png" alt="Expanded PTFE joint sealant tape">
+          <img src="../home page product photos/other products/PTFE Gland Packing (1).png" alt="PTFE gland packing">
+          <img src="../home page product photos/other products/PTFE Machined Components (1).png" alt="PTFE machined component">
+          <img src="../home page product photos/other products/PTFE Rope - Universal Rope (1).png" alt="PTFE universal rope">
+        </div>
       </div>
       <div class="bellow-copy">
         <p class="bellow-kicker">PTFE Products</p>
-        <h1 id="bellow-title">PTFE <span>Bellows</span></h1>
-        <p>Explore available PTFE bellow product views and configurations.</p>
+        <h1 id="other-products-title">Other <span>Products</span></h1>
+        <p>Explore PTFE joint sealant tape, gland packing, machined components and universal rope products in a clean grouped gallery.</p>
         <div class="bellow-actions">
           <a class="primary" href="../pages/contact.html">Inquiry &rarr;</a>
-          <a class="secondary" href="../index.html">Back to Products</a>
+          <a class="secondary" href="../category/PTFE-products.html">Back to PTFE Products</a>
         </div>
       </div>
     </section>
 
-    <section class="bellow-gallery-section" aria-labelledby="bellow-gallery-title">
+    <section class="bellow-gallery-section" aria-labelledby="other-products-gallery-title">
       <header class="bellow-section-head">
-        <p class="bellow-kicker">Image Gallery</p>
-        <h2 id="bellow-gallery-title">Product Images</h2>
-        <p>Available product photographs shown without added technical specifications.</p>
+        <p class="bellow-kicker">Grouped Gallery</p>
+        <h2 id="other-products-gallery-title">Other PTFE Product Range</h2>
+        <p>Multiple product photographs are grouped by product type for easier scanning and a cleaner presentation.</p>
       </header>
 
-      <div class="bellow-gallery">
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/PTFE BELLOW MAKE PFERD POLYMERS.jpeg" alt="PTFE bellow by Pferd Polymers" loading="lazy">
-          <figcaption>PTFE Bellow</figcaption>
-        </figure>
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/PTFE BELLOW WITH SS304 FLANGE.jpg" alt="PTFE bellow with SS304 flange" loading="lazy">
-          <figcaption>SS304 Flange View</figcaption>
-        </figure>
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.03.57.jpeg" alt="PTFE bellow product view 1" loading="lazy">
-          <figcaption>Product View 01</figcaption>
-        </figure>
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.03.58 (1).jpeg" alt="PTFE bellow product view 2" loading="lazy">
-          <figcaption>Product View 02</figcaption>
-        </figure>
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.03.58.jpeg" alt="PTFE bellow product view 3" loading="lazy">
-          <figcaption>Product View 03</figcaption>
-        </figure>
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.03.59.jpeg" alt="PTFE bellow product view 4" loading="lazy">
-          <figcaption>Product View 04</figcaption>
-        </figure>
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.04.00 (1).jpeg" alt="PTFE bellow product view 5" loading="lazy">
-          <figcaption>Product View 05</figcaption>
-        </figure>
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.04.00 (2).jpeg" alt="PTFE bellow product view 6" loading="lazy">
-          <figcaption>Product View 06</figcaption>
-        </figure>
-        <figure class="bellow-card">
-          <img src="../home page product photos/LINED PRODUCTS/BELLOW/WhatsApp Image 2021-09-20 at 12.04.01.jpeg" alt="PTFE bellow product view 7" loading="lazy">
-          <figcaption>Product View 07</figcaption>
-        </figure>
+      <div class="bellow-gallery other-products-grid">
+        <article class="bellow-card other-product-card">
+          <div class="other-card-head">
+            <p>Sealing Tape</p>
+            <h3>Expanded PTFE Joint Sealant Tape</h3>
+          </div>
+          <div class="other-image-grid">
+            <img src="../home page product photos/other products/Expanded PTFE Joint Sealant Tape (1).png" alt="Expanded PTFE joint sealant tape view 1" loading="lazy">
+            <img src="../home page product photos/other products/Expanded PTFE Joint Sealant Tape (2).png" alt="Expanded PTFE joint sealant tape view 2" loading="lazy">
+            <img src="../home page product photos/other products/Expanded PTFE Joint Sealant Tape (3).png" alt="Expanded PTFE joint sealant tape view 3" loading="lazy">
+            <img src="../home page product photos/other products/Expanded PTFE Joint Sealant Tape (4).png" alt="Expanded PTFE joint sealant tape view 4" loading="lazy">
+          </div>
+        </article>
+
+        <article class="bellow-card other-product-card">
+          <div class="other-card-head">
+            <p>Packing</p>
+            <h3>PTFE Gland Packing</h3>
+          </div>
+          <div class="other-image-grid">
+            <img src="../home page product photos/other products/PTFE Gland Packing (1).png" alt="PTFE gland packing view 1" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Gland Packing (2).png" alt="PTFE gland packing view 2" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Gland Packing (3).png" alt="PTFE gland packing view 3" loading="lazy">
+          </div>
+        </article>
+
+        <article class="bellow-card other-product-card">
+          <div class="other-card-head">
+            <p>Custom Parts</p>
+            <h3>PTFE Machined Components</h3>
+          </div>
+          <div class="other-image-grid">
+            <img src="../home page product photos/other products/PTFE Machined Components (1).png" alt="PTFE machined component view 1" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Machined Components (2).png" alt="PTFE machined component view 2" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Machined Components (3).png" alt="PTFE machined component view 3" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Machined Components (4).png" alt="PTFE machined component view 4" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Machined Components (5).png" alt="PTFE machined component view 5" loading="lazy">
+          </div>
+        </article>
+
+        <article class="bellow-card other-product-card">
+          <div class="other-card-head">
+            <p>Rope</p>
+            <h3>PTFE Rope - Universal Rope</h3>
+          </div>
+          <div class="other-image-grid">
+            <img src="../home page product photos/other products/PTFE Rope - Universal Rope (1).png" alt="PTFE universal rope view 1" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Rope - Universal Rope (2).png" alt="PTFE universal rope view 2" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Rope - Universal Rope (3).png" alt="PTFE universal rope view 3" loading="lazy">
+            <img src="../home page product photos/other products/PTFE Rope - Universal Rope (4).png" alt="PTFE universal rope view 4" loading="lazy">
+          </div>
+        </article>
       </div>
     </section>
   </main>
@@ -574,5 +687,3 @@
   <script src="../script.js"></script>
 </body>
 </html>
-
-

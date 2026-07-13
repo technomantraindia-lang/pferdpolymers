@@ -9511,6 +9511,10 @@ padding-right: max(18px, calc((100vw - 1480px) / 2));
   box-shadow: 0 14px 34px rgba(6, 45, 103, 0.1);
 }
 
+.technical-specs {
+  align-self: start;
+}
+
 .product-overview h2,
 .technical-specs h2 {
   margin: 0;
