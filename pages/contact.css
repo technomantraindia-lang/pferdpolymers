@@ -18,7 +18,7 @@
   align-items: center;
   min-height: 500px;
   padding: 46px 56px 34px;
-  background: url("contact-bananr.png") center center / cover no-repeat;
+  background: url("../contact-bananr.png") center center / cover no-repeat;
   overflow: hidden;
   text-align: left;
 }
@@ -915,7 +915,7 @@
   padding: 84px max(22px, calc((100vw - 1220px) / 2));
   background:
     linear-gradient(90deg, rgba(5, 24, 55, 0.82), rgba(5, 34, 62, 0.54)),
-    url("contact-bananr.png") center / cover no-repeat;
+    url("../contact-bananr.png") center / cover no-repeat;
 }
 
 .contact-hero-content {
@@ -1925,7 +1925,7 @@
   padding: 46px 56px 34px !important;
   overflow: hidden !important;
   text-align: left !important;
-  background: url("contact-bananr.png") center center / cover no-repeat !important;
+  background: url("../contact-bananr.png") center center / cover no-repeat !important;
 }
 
 .contact-page .contact-hero::before {

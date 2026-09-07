@@ -28,7 +28,7 @@
   align-items: center;
   min-height: 500px;
   padding: 46px 56px 34px;
-  background: url("contact-bananr.png") center center / cover no-repeat;
+  background: url("../contact-bananr.png") center center / cover no-repeat;
   overflow: hidden;
   text-align: left;
 }
@@ -275,7 +275,7 @@
   padding: 78px max(28px, calc((100vw - 1320px) / 2)) 82px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.76)),
-    url("contact-bananr.png") center center / cover fixed no-repeat !important;
+    url("../contact-bananr.png") center center / cover fixed no-repeat !important;
 }
 
 .industry-solutions::before,
@@ -490,7 +490,7 @@
   color: #fff;
   background:
     linear-gradient(90deg, rgba(2, 19, 50, 0.98), rgba(4, 38, 86, 0.96)),
-    url("contact-bananr.png") center / cover no-repeat;
+    url("../contact-bananr.png") center / cover no-repeat;
 }
 
 .industry-why h2 {
@@ -710,7 +710,7 @@
   .industry-solutions {
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.8)),
-      url("contact-bananr.png") center center / cover no-repeat !important;
+      url("../contact-bananr.png") center center / cover no-repeat !important;
   }
 
   .industry-card-grid,
@@ -838,7 +838,7 @@
   text-align: left !important;
   background:
     linear-gradient(90deg, rgba(1, 19, 48, 0.98) 0%, rgba(3, 30, 68, 0.98) 57%, rgba(6, 45, 103, 0.88) 100%),
-    url("contact-bananr.png") center center / cover no-repeat !important;
+      url("../contact-bananr.png") center center / cover no-repeat !important;
 }
 
 .industries-page .industries-hero::before {
@@ -1291,7 +1291,7 @@
   padding: 46px 56px 34px !important;
   overflow: hidden !important;
   text-align: left !important;
-  background: url("contact-bananr.png") center center / cover no-repeat !important;
+  background: url("../contact-bananr.png") center center / cover no-repeat !important;
 }
 
 .industries-page .industries-hero::before {

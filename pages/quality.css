@@ -30,7 +30,7 @@
   color: #fff;
   background:
     linear-gradient(90deg, rgba(1, 19, 48, 0.98) 0%, rgba(3, 30, 68, 0.96) 56%, rgba(6, 45, 103, 0.82) 100%),
-    url("contact-bananr.png") center / cover no-repeat;
+    url("../contact-bananr.png") center / cover no-repeat;
 }
 
 .quality-hero::before {
@@ -324,7 +324,7 @@
   color: #fff;
   background:
     linear-gradient(90deg, rgba(2, 19, 50, 0.98), rgba(4, 38, 86, 0.96)),
-    url("contact-bananr.png") center / cover no-repeat;
+    url("../contact-bananr.png") center / cover no-repeat;
 }
 
 .quality-strip {
@@ -1234,7 +1234,7 @@
   padding: 46px 56px 34px !important;
   overflow: hidden !important;
   text-align: left !important;
-  background: url("contact-bananr.png") center center / cover no-repeat !important;
+  background: url("../contact-bananr.png") center center / cover no-repeat !important;
 }
 
 .quality-page .quality-hero::before {

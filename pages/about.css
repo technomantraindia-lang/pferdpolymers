@@ -35,7 +35,7 @@
   padding: 46px 56px 34px;
   overflow: hidden;
   text-align: left;
-  background: url("contact-bananr.png") center center / cover no-repeat;
+  background: url("../contact-bananr.png") center center / cover no-repeat;
 }
 
 .about-hero::before {
@@ -645,7 +645,7 @@
 
 .about-proof {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 30px;
   width: 100%;
   margin: 0 auto;
@@ -764,8 +764,8 @@
 
 .about-proof-global {
   display: grid;
-  grid-template-columns: minmax(220px, 0.88fr) minmax(260px, 1.12fr);
-  gap: 28px;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(360px, 1.2fr);
+  gap: 42px;
   align-items: center;
 }
 
@@ -791,7 +791,7 @@
 .about-global-map img {
   display: block;
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   max-height: 300px;
   object-fit: contain;
   object-position: center right;
@@ -1014,7 +1014,7 @@
   padding: 46px 56px 34px !important;
   overflow: hidden !important;
   text-align: left !important;
-  background: url("contact-bananr.png") center center / cover no-repeat !important;
+  background: url("../contact-bananr.png") center center / cover no-repeat !important;
 }
 
 .about-page .about-hero::before {
