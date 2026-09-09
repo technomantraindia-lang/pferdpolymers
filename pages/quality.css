@@ -990,6 +990,10 @@
 }
 
 .quality-page .cert-grid {
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   gap: 26px !important;
 }
 
@@ -1045,6 +1049,12 @@
   font-size: 15px !important;
   line-height: 1.6;
   font-weight: 400;
+}
+
+@media (max-width: 1180px) and (min-width: 761px) {
+  .quality-page .cert-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .quality-page .quality-matters {

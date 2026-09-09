@@ -14289,3 +14289,42 @@ canvas {
     word-break: normal !important;
   }
 }
+
+/* Keep the compact footer inside medium-size viewports. */
+@media (max-width: 1300px) and (min-width: 701px) {
+  .site-footer .footer-cta {
+    gap: 40px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .site-footer .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    width: calc(100% - 32px) !important;
+    max-width: none !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .site-footer .footer-col:not(:first-child)::before {
+    left: -13px !important;
+  }
+
+  .site-footer .footer-contact article {
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .site-footer .footer-contact article > span {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 19px !important;
+  }
+
+  .site-footer .footer-contact p,
+  .site-footer .footer-brand p,
+  .site-footer .footer-col li a {
+    overflow-wrap: anywhere !important;
+  }
+}
