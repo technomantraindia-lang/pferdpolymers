@@ -5,11 +5,11 @@
 - Indexed source files: 30
 - Structural edges: 26
 - Matched end-to-end flows: 0
-- Updated: 2026-09-07T09:41:26.385Z
+- Updated: 2026-09-09T03:48:19.397Z
 
 ## Dependency edges
-- IMPORT index.html -> script.js
-- IMPORT pages/about.html -> pages/about.css, script.js
+- IMPORT index.html -> style.css, script.js
+- IMPORT pages/about.html -> style.css, pages/about.css, script.js
 - IMPORT pages/contact.html -> style.css, pages/contact.css, script.js
 - IMPORT pages/Industries.html -> style.css, pages/Industries.css, script.js
 - IMPORT pages/quality.html -> style.css, pages/quality.css, script.js
@@ -42,8 +42,8 @@
 
 ## UI/style selectors
 - UI index.html: #home, #about, #products, #industries, #quality, #contact, #contact-form, #inquiry-modal, #inquiry-title, .site-header, .brand, .brand-mark, .mark-p, .mark-blue
-- UI pages/about.css: #d50613, #f4f8fc, .about-page, #fff, .about-hero, .about-hero-content, .about-hero-kicker, #b80712, .about-hero-line, #ffffff, .about-hero-intro, .about-intro, #fbfdff, #eef3f8
 - UI pages/about.html: #inquiry-modal, #inquiry-title, .about-page, .site-header, .brand, .brand-mark, .mark-p, .mark-blue, .mark-red, .horse, .brand-copy, .brand-name, .brand-tagline, .nav
+- UI pages/about.css: #d50613, #f4f8fc, .about-page, #fff, .about-hero, .about-hero-content, .about-hero-kicker, #b80712, .about-hero-line, #ffffff, .about-hero-intro, .about-intro, #fbfdff, #eef3f8
 - UI pages/contact.css: #b80712, #c8d1dd, .contact-hero, .contact-hero-content, #fff, .contact-kicker, .contact-intro, .contact-hero-card, .contact-support-card, .contact-page, .support-item, .support-icon, .contact-quick-info, #f8fafb
 - UI pages/contact.html: #contact-form, #inquiry-modal, #inquiry-title, .contact-page, .site-header, .brand, .brand-mark, .mark-p, .mark-blue, .mark-red, .horse, .brand-copy, .brand-name, .brand-tagline
 - UI pages/Industries.css: #e1111c, #ff671f, #f4f8fd, .industries-page, #fff, .site-header, .industries-hero, .hero-dots, .industries-hero-copy, .industries-breadcrumb, .industry-card-section, .industry-cards-heading, .industry-card-grid, .industry-photo-card
